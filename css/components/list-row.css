@@ -1,0 +1,15 @@
+.list-row {
+  position: relative;
+}
+
+/* Selected: the left edge grows to 4 px. Drawn over the border, so the content does not move */
+.list-row.is-selected::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--border-width) * -1);
+  bottom: calc(var(--border-width) * -1);
+  left: calc(var(--border-width) * -1);
+  width: var(--bar-sm);
+  background: var(--accent);
+  border-radius: var(--radius) 0 0 var(--radius);
+}

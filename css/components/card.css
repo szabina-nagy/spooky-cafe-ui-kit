@@ -1,0 +1,15 @@
+.card {
+  position: relative;
+}
+
+/* Selected: the left edge grows to 6 px. Drawn over the border, so the content does not move */
+.card.is-selected::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--border-width) * -1);
+  bottom: calc(var(--border-width) * -1);
+  left: calc(var(--border-width) * -1);
+  width: var(--bar-lg);
+  background: var(--accent);
+  border-radius: var(--radius) 0 0 var(--radius);
+}
