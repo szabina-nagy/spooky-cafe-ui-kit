@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spooky Cafe UI Kit</title>
+  <meta name="description" content="A cosy cafe game set in a quiet New England town after dark, in the spirit of the film ParaNorman.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700;1,800&family=DM+Sans:wght@400;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components/button.css">
+  <link rel="stylesheet" href="css/components/input.css">
+  <link rel="stylesheet" href="css/components/toggle.css">
+  <link rel="stylesheet" href="css/components/radio.css">
+  <link rel="stylesheet" href="css/components/checkbox.css">
+  <link rel="stylesheet" href="css/components/slider.css">
+  <link rel="stylesheet" href="css/components/tabs.css">
+  <link rel="stylesheet" href="css/components/chips.css">
+  <link rel="stylesheet" href="css/components/card.css">
+  <link rel="stylesheet" href="css/components/list-row.css">
+  <link rel="stylesheet" href="css/components/progress.css">
+  <link rel="stylesheet" href="css/components/modal.css">
+
+  <script src="js/slider.js" defer></script>
+  <script src="js/tabs.js" defer></script>
+  <script src="js/chips.js" defer></script>
+  <script src="js/progress.js" defer></script>
+  <script src="js/modal.js" defer></script>
+</head>
+<body>
+
+  <header class="kit-header">
+    <h1>Spooky Cafe UI Kit</h1>
+    <p>A cosy cafe game set in a quiet New England town after dark, in the spirit of the film ParaNorman.</p>
+    <p class="kit-decisions"></p>
+    <div class="swatches" aria-hidden="true">
+      <span class="swatch" style="background: var(--secondary)"></span>
+      <span class="swatch" style="background: var(--accent)"></span>
+      <span class="swatch" style="background: var(--primary-deep)"></span>
+      <span class="swatch" style="background: var(--alert)"></span>
+      <span class="swatch" style="background: var(--ink)"></span>
+    </div>
+    <nav aria-label="On this page">
+      <ul>
+        <li><a href="#main">Components</a></li>
+        <li><a href="#tokens">Tokens</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section id="buttons" class="kit-section">
+      <h2>Buttons</h2>
+      <div class="variant">
+        <h3>Primary</h3>
+        <div class="states">
+          <!-- One cell per state, the component goes under the label -->
+          <div class="state"><p class="state-label">Default</p></div>
+          <div class="state"><p class="state-label">Hover</p></div>
+          <div class="state"><p class="state-label">Focus</p></div>
+          <div class="state"><p class="state-label">Pressed</p></div>
+          <div class="state"><p class="state-label">Disabled</p></div>
+        </div>
+      </div>
+      <div class="variant">
+        <h3>Secondary</h3>
+        <div class="states">
+          <div class="state"><p class="state-label">Default</p></div>
+          <div class="state"><p class="state-label">Hover</p></div>
+          <div class="state"><p class="state-label">Focus</p></div>
+          <div class="state"><p class="state-label">Pressed</p></div>
+          <div class="state"><p class="state-label">Disabled</p></div>
+        </div>
+      </div>
+      <div class="variant">
+        <h3>Ghost</h3>
+        <div class="states">
+          <div class="state"><p class="state-label">Default</p></div>
+          <div class="state"><p class="state-label">Hover</p></div>
+          <div class="state"><p class="state-label">Focus</p></div>
+          <div class="state"><p class="state-label">Pressed</p></div>
+          <div class="state"><p class="state-label">Disabled</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="text-input" class="kit-section">
+      <h2>Text input</h2>
+      <div class="states">
+        <div class="state"><p class="state-label">Empty</p></div>
+        <div class="state"><p class="state-label">Filled</p></div>
+        <div class="state"><p class="state-label">Focused</p></div>
+        <div class="state"><p class="state-label">Error</p></div>
+        <div class="state"><p class="state-label">Disabled</p></div>
+      </div>
+    </section>
+
+    <section id="toggles" class="kit-section">
+      <h2>Toggles</h2>
+      <div class="states">
+        <div class="state"><p class="state-label">Off</p></div>
+        <div class="state"><p class="state-label">On</p></div>
+        <div class="state"><p class="state-label">Disabled</p></div>
+      </div>
+    </section>
+
+    <section id="radio-group" class="kit-section">
+      <h2>Radio group</h2>
+      <div class="states">
+        <div class="state"><p class="state-label">Cinnamon selected</p></div>
+        <div class="state"><p class="state-label">Chocolate powder selected</p></div>
+        <div class="state"><p class="state-label">Disabled</p></div>
+      </div>
+    </section>
+
+    <section id="checkbox" class="kit-section">
+      <h2>Checkbox</h2>
+      <div class="states">
+        <div class="state"><p class="state-label">Unchecked</p></div>
+        <div class="state"><p class="state-label">Checked</p></div>
+        <div class="state"><p class="state-label">Indeterminate</p></div>
+        <div class="state"><p class="state-label">Disabled</p></div>
+      </div>
+    </section>
+
+    <section id="slider" class="kit-section">
+      <h2>Slider</h2>
+      <div class="states">
+        <div class="state"><p class="state-label">Default</p></div>
+        <div class="state"><p class="state-label">Focused</p></div>
+        <div class="state"><p class="state-label">Disabled</p></div>
+      </div>
+    </section>
+
+    <section id="tabs" class="kit-section">
+      <h2>Tabs</h2>
+      <!-- One tablist holds all four states, so the labels sit in their own row above it -->
+      <div class="tab-captions" aria-hidden="true">
+        <span>Selected</span>
+        <span>Unselected</span>
+        <span>Hover</span>
+        <span>Disabled</span>
+      </div>
+    </section>
+
+    <section id="chips" class="kit-section">
+      <h2>Chips</h2>
+      <div class="states">
+        <div class="state"><p class="state-label">Default</p></div>
+        <div class="state"><p class="state-label">Selected</p></div>
+        <div class="state"><p class="state-label">Removable</p></div>
+        <div class="state"><p class="state-label">Disabled</p></div>
+      </div>
+    </section>
+
+    <section id="cards" class="kit-section">
+      <h2>Cards</h2>
+      <div class="states">
+        <div class="state"><p class="state-label">Default</p></div>
+        <div class="state"><p class="state-label">Hover</p></div>
+        <div class="state"><p class="state-label">Selected</p></div>
+      </div>
+    </section>
+
+    <section id="list-row" class="kit-section">
+      <h2>List row</h2>
+      <div class="states">
+        <div class="state"><p class="state-label">Default</p></div>
+        <div class="state"><p class="state-label">Hover</p></div>
+        <div class="state"><p class="state-label">Selected</p></div>
+        <div class="state"><p class="state-label">Disabled</p></div>
+      </div>
+    </section>
+
+    <section id="progress-bar" class="kit-section">
+      <h2>Progress bar</h2>
+      <div class="states">
+        <div class="state"><p class="state-label">In progress</p></div>
+        <div class="state"><p class="state-label">Complete</p></div>
+        <div class="state"><p class="state-label">Alert</p></div>
+      </div>
+    </section>
+
+    <section id="modal" class="kit-section">
+      <h2>Modal</h2>
+      <div class="states">
+        <div class="state"><p class="state-label">Confirmation</p></div>
+        <div class="state"><p class="state-label">Destructive</p></div>
+      </div>
+    </section>
+
+    <section id="focus" class="kit-section">
+      <h2>Focus</h2>
+      <div class="variant">
+        <h3>Focus on a resting component</h3>
+        <div class="states">
+          <div class="state"><p class="state-label">Toggle</p></div>
+          <div class="state"><p class="state-label">Checkbox</p></div>
+          <div class="state"><p class="state-label">Radio</p></div>
+          <div class="state"><p class="state-label">Chip</p></div>
+          <div class="state"><p class="state-label">List row</p></div>
+          <div class="state"><p class="state-label">Tab</p></div>
+        </div>
+      </div>
+      <div class="variant">
+        <h3>Focus on a chosen component</h3>
+        <div class="states">
+          <div class="state"><p class="state-label">Toggle</p></div>
+          <div class="state"><p class="state-label">Checkbox</p></div>
+          <div class="state"><p class="state-label">Radio</p></div>
+          <div class="state"><p class="state-label">Chip</p></div>
+          <div class="state"><p class="state-label">List row</p></div>
+          <div class="state"><p class="state-label">Tab</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="icons" class="kit-section">
+      <h2>Icons</h2>
+      <ul class="icon-list"></ul>
+    </section>
+
+    <section id="tokens" class="kit-section">
+      <h2>Tokens</h2>
+      <h3>Colour</h3>
+      <h3>Type</h3>
+      <h3>Spacing</h3>
+      <h3>Shape</h3>
+    </section>
+
+  </main>
+
+  <footer class="kit-footer">
+    <nav aria-label="Game screens">
+      <ul>
+        <li><a href="screens/settings.html">Settings screen</a></li>
+        <li><a href="screens/inventory.html">Inventory screen</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
