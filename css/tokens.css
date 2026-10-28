@@ -40,10 +40,12 @@
   /* Type */
   --font-heading: "Barlow Condensed", "Arial Narrow", sans-serif;
   --font-body: "DM Sans", system-ui, sans-serif;
-  --text-button: 1.125rem;          /* 18px semibold uppercase, tracking 0.05em. Buttons and tab labels */
-  --text-title: 2rem;               /* 32px extrabold italic uppercase. Titles in card and modal */
-  --text-subtitle: 1.25rem;         /* 20px uppercase. Subtitles in list row and progress bar */
+  --text-button: 1.125rem;          /* 18px bold uppercase, tracking 0.05em. Buttons and tab labels */
+  --text-title: 1.5rem;             /* 24px extrabold italic uppercase. Titles in card and modal */
+  --text-subtitle: 1rem;            /* 16px semibold DM Sans. Subtitles in list row and progress bar */
   --text-body: 1rem;                /* 16px regular. Body text */
+  --leading-body: 1.3125;           /* Figma Auto for DM Sans 16, measured as 21 px per line. Body and subtitle */
+  --leading-heading: 1.45;          /* 145%. Barlow Condensed in titles and buttons */
   --weight-body: 400;
   --weight-strong: 600;
   --weight-heading: 700;
@@ -80,26 +82,6 @@
   /* Icons */
   --icon-size: 24px;
   --icon-stroke: 2px;
-}
-
-/* One focus rule for every component */
-:focus-visible {
-  outline: var(--focus-width) solid var(--focus-ring);
-  outline-offset: var(--focus-offset);
-  box-shadow: none;
-  transform: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; animation: none !important; transform: none !important; }
-}
-
-/* Quick check that the tokens work in a blank page */
-body {
-  background: var(--ink);
-  color: var(--text);
-  font-family: var(--font-body);
-  font-size: var(--text-body);
 }
 
 /* Layout grid */
