@@ -1,0 +1,112 @@
+/* Tokens for the Spooky Cafe UI kit.
+   Aubergine and lime, in the spirit of a small New England town after dark.
+   Names match the Figma variables. Every pairing below was measured against WCAG AA:
+   4.5 to 1 for text, 3 to 1 for control edges and focus rings.
+   The ratio sits next to each pairing. Follow the "use only on" notes, they keep the kit accessible. */
+
+:root {
+  /* Neutrals */
+  --ink: #1a1020;                   /* Figma: Background, text. Page background. Text on lime. Secondary on it 15.13 */
+  --surface: #261630;               /* Figma: text-bg. Cards, inputs, rows, modals. Secondary 13.90, lime 14.32 */
+  --surface-chosen: #3a1d55;        /* NEW. Fill for chosen and hovered items. Use Secondary or Accent for text on it. Secondary 11.59, lime 11.94, alert 5.11 */
+  --secondary: #f3e7d8;             /* Light colour. Main text on dark, secondary button fill. 15.13 on ink */
+  --secondary-hover: #ccbba7;       /* Secondary button hover. Ink text on it 9.86 */
+  --secondary-pressed: #9c918f;     /* NEW. Secondary button pressed, about 60% of secondary hover as a solid colour. Ink text 6.0 */
+
+  /* Primary: aubergine purple */
+  --primary: #a76ce8;               /* Edges, disabled states, placeholder text. 5.23 on ink, 4.80 on surface, 4.00 on surface chosen */
+  --primary-deep: #7c3fbe;          /* The hard shadow colour. Secondary text 5.20, lime 5.36. NEVER an edge on dark (2.91 on ink) */
+  --border: var(--primary);         /* Figma: Border, aliased to Primary */
+
+  /* Accent: lime */
+  --accent: #c8ff00;                /* Active, chosen, focus. 15.59 on ink, 14.32 on surface. Never as text or edge on a light surface */
+  --accent-hover: #e2ff60;          /* Primary button hover. Ink text 16.4 */
+  --accent-pressed: #a4cc04;        /* NEW. Primary button pressed. Ink text 9.85 */
+  --on-accent: var(--ink);          /* Text on a lime fill is always ink */
+  --focus-ring: var(--accent);
+
+  /* Text */
+  --text: var(--secondary);         /* 15.13 on ink, 13.90 on surface, 11.59 on surface chosen */
+  --text-muted: var(--secondary-hover);  /* Alias. Secondary lines, captions, card body. 9.0 on surface, 9.9 on ink, 7.6 on surface chosen */
+
+  /* Alert: burnt sienna */
+  --alert: #ef7b4b;                 /* Error text and edges 6.68 on ink, 6.13 on surface. Fill for destructive buttons, ink text 6.68 */
+  --alert-on-fill: var(--ink);
+
+  /* Ghost button fills. Lime text on them */
+  --ghost-hover: #542c7f;           /* lime text 8.7. Hover is the brighter step */
+  --ghost-pressed: #371e4f;         /* lime text 12.2. Pressed is the darker step */
+
+  /* Type */
+  --font-heading: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --text-button: 1.125rem;          /* 18px semibold uppercase, tracking 0.05em. Buttons and tab labels */
+  --text-title: 2rem;               /* 32px extrabold italic uppercase. Titles in card and modal */
+  --text-subtitle: 1.25rem;         /* 20px uppercase. Subtitles in list row and progress bar */
+  --text-body: 1rem;                /* 16px regular. Body text */
+  --weight-body: 400;
+  --weight-strong: 600;
+  --weight-heading: 700;
+  --weight-title: 800;
+  --tracking-heading: 0.04em;       /* headings, uppercase */
+  --tracking-button: 0.05em;        /* buttons and tabs, uppercase */
+
+  /* Spacing */
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;                 /* button side padding */
+
+  /* Shape */
+  --radius: 4px;
+  --border-width: 2px;
+  --shadow-sm: 4px 4px 0 var(--primary-deep);   /* primary button, hovered list row. Decorative, no blur */
+  --shadow-lg: 6px 6px 0 var(--primary-deep);   /* card. Hover lifts 2 px, add 2 px to the vertical offset */
+  --bar-sm: 4px;                           /* selected list row, left edge thickness */
+  --bar-lg: 6px;                           /* selected card, left edge thickness */
+  --focus-width: 2px;
+  --focus-offset: 2px;
+  --control-height: 46px;           /* buttons, fixed height in every variant. 2 px border always present */
+  --touch-target: 44px;             /* minimum hit area for any control */
+
+  /* Scrim behind a modal */
+  --scrim: rgb(26 16 32 / 0.7);
+
+  /* Motion */
+  --motion-fast: 120ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* Icons */
+  --icon-size: 24px;
+  --icon-stroke: 2px;
+}
+
+/* One focus rule for every component */
+:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+  box-shadow: none;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; transform: none !important; }
+}
+
+/* Quick check that the tokens work in a blank page */
+body {
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+}
+
+/* Layout grid */
+:root {
+  --grid-columns: 12;
+  --grid-gutter: var(--space-24);
+  --grid-column-width: 80px;        /* desktop 1440, content width 1224, centred */
+  --margin-tablet: var(--space-32); /* 768, 8 columns */
+  --margin-phone: var(--space-16);  /* 390, single column */
+}

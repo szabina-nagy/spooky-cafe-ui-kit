@@ -17,20 +17,23 @@ A cosy cafe in a quiet New England town after dark, in the spirit of the film Pa
 
 | Colour | Hex | Current thinking |
 | --- | --- | --- |
-| Ink | `#1a1020` | Background |
-| Paper | `#f3e7d8` | Text on dark, light surfaces |
-| Purple | `#7c3fbe` | Main surface |
-| Lime | `#c8ff00` | The one accent |
-| Orange | `#ef7b4b` | Alerts |
+| Ink | `#1a1020` | Background, text on lime |
+| Surface | `#261630` | Cards, inputs, rows, modals |
+| Surface chosen | `#3a1d55` | Chosen and hovered items |
+| Secondary | `#f3e7d8` | Text on dark, secondary button |
+| Primary | `#a76ce8` | Control edges, placeholder text |
+| Primary deep | `#7c3fbe` | Hard shadow only |
+| Accent | `#c8ff00` | Lime, the one accent |
+| Alert | `#ef7b4b` | Errors, destructive buttons |
 
-Hex values were sampled from a screenshot of the Figma exploration, they can still change.
+Hover and pressed shades, and the ratio for every pairing, are in css/tokens.css. Values can still change.
 
 Contrast so far:
 
-* Paper and lime pass on ink (15.13, 15.59) and on purple (5.2, 5.36).
-* On purple nothing else passes, not even ink (2.91) or orange (2.3). Text and control edges on purple need paper or lime.
-!! Purple needs to be explored further!!
-* Never use lime as text or as an edge on paper (1.03).
+* Secondary and lime pass on ink (15.13, 15.59), surface (13.90, 14.32) and surface chosen (11.59, 11.94).
+* Primary passes as text on ink and surface (5.23, 4.80), but on surface chosen only as an edge (4.00).
+* Primary deep fails as an edge on ink (2.91), so it is only used for the shadow.
+* Never use lime as text or as an edge on secondary (1.03).
 
 ## Must haves
 
@@ -50,6 +53,12 @@ Constraints:
 ## Components
 
 A starting list of 12, open to change as the game screens take shape: button, text input, toggle, checkbox, radio group, slider, tabs, chips, card, list row, progress bar, modal.
+
+Button states:
+
+* Default, hover, focus, pressed, disabled. Loading only if the screens need it.
+* The focus ring also shows on top of hover and pressed.
+* Still to decide: whether disabled buttons stay focusable, and whether primary and secondary get a border so they keep their outline in high contrast mode.
 
 ## Open
 
