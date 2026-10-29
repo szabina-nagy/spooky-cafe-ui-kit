@@ -59,81 +59,45 @@
 
     <section id="buttons" class="kit-section">
       <h2 class="text-title">Buttons</h2>
-      <div class="variant">
-        <h3>Primary</h3>
-        <div class="states">
-          <!-- One cell per state, the component goes under the label -->
-          <div class="state">
-            <p class="state-label">Default</p>
-            <button type="button" class="button button-primary">Go into the cafe</button>
-          </div>
-          <div class="state">
-            <p class="state-label">Hover</p>
-            <button type="button" class="button button-primary is-hover">Go into the cafe</button>
-          </div>
-          <div class="state">
-            <p class="state-label">Focus</p>
-            <button type="button" class="button button-primary is-focus">Go into the cafe</button>
-          </div>
-          <div class="state">
-            <p class="state-label">Pressed</p>
-            <button type="button" class="button button-primary is-pressed">Go into the cafe</button>
-          </div>
-          <div class="state">
-            <p class="state-label">Disabled</p>
-            <button type="button" class="button button-primary" disabled>Go into the cafe</button>
-          </div>
-        </div>
-      </div>
-      <div class="variant">
-        <h3>Secondary</h3>
-        <div class="states">
-          <div class="state">
-            <p class="state-label">Default</p>
-              <button type="button" class="button button-secondary">Come back tomorrow</button>
-          </div>
-          <div class="state">
-            <p class="state-label">Hover</p>
-            <button type="button" class="button button-secondary is-hover">Come back tomorrow</button>
-          </div>
-          <div class="state">
-            <p class="state-label">Focus</p>
-            <button type="button" class="button button-secondary is-focus">Come back tomorrow</button>
-          </div>
-          <div class="state">
-            <p class="state-label">Pressed</p>
-            <button type="button" class="button button-secondary is-pressed">Come back tomorrow</button>
-          </div>
-          <div class="state">
-            <p class="state-label">Disabled</p>
-            <button type="button" class="button button-secondary" disabled>Come back tomorrow</button>
-          </div>
-        </div>
-      </div>
-      <div class="variant">
-        <h3>Ghost</h3>
-        <div class="states">
-          <div class="state">
-            <p class="state-label">Default</p>
-            <button type="button" class="button button-ghost">Wait in the queue</button>
-          </div>
-          <div class="state">
-            <p class="state-label">Hover</p>
-            <button type="button" class="button button-ghost is-hover">Wait in the queue</button>
-          </div>
-          <div class="state">
-            <p class="state-label">Focus</p>
-            <button type="button" class="button button-ghost is-focus">Wait in the queue</button>
-          </div>
-          <div class="state">
-            <p class="state-label">Pressed</p>
-            <button type="button" class="button button-ghost is-pressed">Wait in the queue</button>
-          </div>
-          <div class="state">
-            <p class="state-label">Disabled</p>
-            <button type="button" class="button button-ghost" disabled>Wait in the queue</button>
-          </div>
-        </div>
+      <div class="state-table-wrap" role="region" aria-label="Button states" tabindex="0">
+        <table class="state-table">
+          <thead>
+            <tr>
+              <td></td>
+              <th scope="col">Default</th>
+              <th scope="col">Hover</th>
+              <th scope="col">Focus</th>
+              <th scope="col">Pressed</th>
+              <th scope="col">Disabled</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Primary</th>
+              <td><button type="button" class="button button-primary">Go into the cafe</button></td>
+              <td><button type="button" class="button button-primary is-hover">Go into the cafe</button></td>
+              <td><button type="button" class="button button-primary is-focus">Go into the cafe</button></td>
+              <td><button type="button" class="button button-primary is-pressed">Go into the cafe</button></td>
+              <td><button type="button" class="button button-primary" disabled>Go into the cafe</button></td>
+            </tr>
+            <tr>
+              <th scope="row">Secondary</th>
+              <td><button type="button" class="button button-secondary">Come back later</button></td>
+              <td><button type="button" class="button button-secondary is-hover">Come back later</button></td>
+              <td><button type="button" class="button button-secondary is-focus">Come back later</button></td>
+              <td><button type="button" class="button button-secondary is-pressed">Come back later</button></td>
+              <td><button type="button" class="button button-secondary" disabled>Come back later</button></td>
+            </tr>
+            <tr>
+              <th scope="row">Ghost</th>
+              <td><button type="button" class="button button-ghost">Wait in the queue</button></td>
+              <td><button type="button" class="button button-ghost is-hover">Wait in the queue</button></td>
+              <td><button type="button" class="button button-ghost is-focus">Wait in the queue</button></td>
+              <td><button type="button" class="button button-ghost is-pressed">Wait in the queue</button></td>
+              <td><button type="button" class="button button-ghost" disabled>Wait in the queue</button></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
