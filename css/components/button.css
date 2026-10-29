@@ -59,7 +59,7 @@
 }
 
 .button-secondary:hover,
-.button-secondary.button-secondary.is-hover {
+.button-secondary.is-hover {
   background: var(--secondary-hover);
   border-color: var(--secondary-hover);
 }
@@ -68,6 +68,25 @@
 .button-secondary.is-pressed {
   background: var(--secondary-pressed);
   border-color: var(--secondary);
+}
+
+/* Ghost button*/
+.button-ghost {
+  background: var(--ink);
+  border-color: var(--border);
+  color: var(--accent);
+}
+
+.button-ghost:hover,
+.button-ghost.is-hover {
+  background: var(--ghost-hover);
+  border-color: var(--border);
+}
+
+.button-ghost:active,
+.button-ghost.is-pressed {
+  background: var(--ghost-pressed);
+  border-color: var(--border);
 }
 
 /* Last, so it beats hover. Disabled buttons still match :hover */
