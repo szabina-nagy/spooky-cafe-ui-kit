@@ -1,0 +1,61 @@
+/* Shared by every variant: size, shape and motion. */
+.button {
+  font-family: var(--font-heading);
+  font-size: var(--text-button);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-button);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  height: var(--control-height);
+  padding: 0 var(--space-32);
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease);
+}
+
+/* Kit page only: shows the focus ring without real focus. Matches :focus-visible in base.css */
+.button.is-focus {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+  box-shadow: none;
+}
+
+/* Primary. The border matches the fill, so it only shows in high contrast mode */
+.button-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.button-primary:hover,
+.button-primary.is-hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+/* After hover, so pressed wins while the pointer is still on the button */
+.button-primary:active,
+.button-primary.is-pressed {
+  background: var(--accent-pressed);
+  border-color: var(--accent-pressed);
+}
+
+.button-primary.is-pressed {
+  box-shadow: none;
+}
+
+/* Last, so it beats hover. Disabled buttons still match :hover */
+.button-primary:disabled {
+  background: transparent;
+  border-color: var(--primary);
+  border-style: dashed;
+  color: var(--primary);
+  box-shadow: none;
+  cursor: not-allowed;
+}
