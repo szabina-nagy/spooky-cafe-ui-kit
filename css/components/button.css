@@ -46,12 +46,34 @@
   border-color: var(--accent-pressed);
 }
 
+/* Pressed button looses the shadow */
 .button-primary.is-pressed {
   box-shadow: none;
 }
 
+/* Secondary button*/
+.button-secondary {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--on-accent);
+}
+
+.button-secondary:hover,
+.button-secondary.button-secondary.is-hover {
+  background: var(--secondary-hover);
+  border-color: var(--secondary-hover);
+}
+
+.button-secondary:active,
+.button-secondary.is-pressed {
+  background: var(--secondary-pressed);
+  border-color: var(--secondary);
+}
+
 /* Last, so it beats hover. Disabled buttons still match :hover */
-.button-primary:disabled {
+.button-primary:disabled,
+.button-secondary:disabled,
+.button-ghost:disabled {
   background: transparent;
   border-color: var(--primary);
   border-style: dashed;
