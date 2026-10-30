@@ -175,9 +175,60 @@
     <section id="radio-group" class="kit-section">
       <h2 class="text-title">Radio group</h2>
       <div class="states">
-        <div class="state"><p class="state-label">Cinnamon selected</p></div>
-        <div class="state"><p class="state-label">Chocolate powder selected</p></div>
-        <div class="state"><p class="state-label">Disabled</p></div>
+        <div class="state">
+          <p class="state-label">Cinnamon selected</p>
+          <fieldset class="radio-group">
+            <legend>Toppings</legend>
+            <label class="radio-field">
+              <input class="radio" type="radio" name="toppings-1" value="cinnamon" checked>
+              Cinnamon
+            </label>
+            <label class="radio-field">
+              <input class="radio" type="radio" name="toppings-1" value="chocolate">
+              Chocolate powder
+            </label>
+            <label class="radio-field">
+              <input class="radio" type="radio" name="toppings-1" value="cream">
+              Whipped cream
+            </label>
+          </fieldset>
+        </div>
+        <div class="state">
+          <p class="state-label">Chocolate powder selected</p>
+          <fieldset class="radio-group">
+            <legend>Toppings</legend>
+            <label class="radio-field">
+              <input class="radio" type="radio" name="toppings-2" value="cinnamon">
+              Cinnamon
+            </label>
+            <label class="radio-field">
+              <input class="radio" type="radio" name="toppings-2" value="chocolate" checked>
+              Chocolate powder
+            </label>
+            <label class="radio-field">
+              <input class="radio" type="radio" name="toppings-2" value="cream">
+              Whipped cream
+            </label>
+          </fieldset>
+        </div>
+        <div class="state">
+          <p class="state-label">Disabled</p>
+          <fieldset class="radio-group" disabled>
+            <legend>Toppings</legend>
+            <label class="radio-field">
+              <input class="radio" type="radio" name="toppings-3" value="cinnamon">
+              Cinnamon
+            </label>
+            <label class="radio-field">
+              <input class="radio" type="radio" name="toppings-3" value="chocolate" checked>
+              Chocolate powder
+            </label>
+            <label class="radio-field">
+              <input class="radio" type="radio" name="toppings-3" value="cream">
+              Whipped cream
+            </label>
+          </fieldset>
+        </div>
       </div>
     </section>
 

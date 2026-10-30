@@ -1,0 +1,87 @@
+/* Reset fieldset and radio buttons*/
+.radio {
+    appearance: none;
+}
+
+.radio-group {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-width: 0;
+}
+
+.radio-group legend {
+    padding: 0;
+}
+
+/* Fieldset and radio styling*/
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+}
+
+.radio-group legend {
+    margin-bottom: var(--space-12);
+}
+.radio {
+    position: relative;
+    flex-shrink: 0;
+    height: 22px;
+    width: 22px;
+    margin: 0;
+    background: var(--surface);
+    border-radius: 11px;
+    border: var(--border-width) solid var(--border);
+    cursor: pointer;
+}
+
+.radio-field {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+}
+
+/* Checked*/
+.radio:checked:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 5px;
+}
+
+.radio:checked {
+    border-color: var(--accent);
+}
+
+/* Disabled*/
+.radio:disabled {
+    border-color: var(--primary);
+    border-style: dashed;
+    cursor: not-allowed;
+}
+
+.radio:disabled:checked::before {
+    background: var(--primary);
+}
+
+.radio-field:has(.radio:disabled) {
+    color: var(--primary);
+    cursor: not-allowed;
+}
+
+/* High contrast mode*/
+@media (forced-colors: active) {
+    .radio:checked:before {
+        forced-color-adjust: none;
+        background: CanvasText;
+    }
+
+    .radio:disabled:checked::before {
+        background: GrayText;
+    }
+}
