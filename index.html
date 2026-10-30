@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="css/components/progress.css">
   <link rel="stylesheet" href="css/components/modal.css">
 
+  <script src="js/checkbox.js" defer></script>
   <script src="js/slider.js" defer></script>
   <script src="js/tabs.js" defer></script>
   <script src="js/chips.js" defer></script>
@@ -235,10 +236,34 @@
     <section id="checkbox" class="kit-section">
       <h2 class="text-title">Checkbox</h2>
       <div class="states">
-        <div class="state"><p class="state-label">Unchecked</p></div>
-        <div class="state"><p class="state-label">Checked</p></div>
-        <div class="state"><p class="state-label">Indeterminate</p></div>
-        <div class="state"><p class="state-label">Disabled</p></div>
+        <div class="state">
+          <p class="state-label">Unchecked</p>
+          <label class="checkbox-field">
+            <input class="checkbox" type="checkbox">
+            Keep me posted
+          </label>
+        </div>
+        <div class="state">
+          <p class="state-label">Checked</p>
+          <label class="checkbox-field">
+            <input class="checkbox" type="checkbox" checked>
+            Keep me posted
+          </label>
+        </div>
+        <div class="state">
+          <p class="state-label">Indeterminate</p>
+          <label class="checkbox-field">
+            <input class="checkbox" id="checkbox-indeterminate" type="checkbox">
+            Keep me posted
+          </label>
+        </div>
+        <div class="state">
+          <p class="state-label">Disabled</p>
+          <label class="checkbox-field">
+            <input class="checkbox" type="checkbox" disabled>
+            Keep me posted
+          </label>
+        </div>
       </div>
     </section>
 

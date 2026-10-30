@@ -1,0 +1,104 @@
+/* Reset and style checkbox */
+.checkbox {
+    appearance: none;
+    margin: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    position: relative;
+}
+
+.checkbox-field {
+    display: inline-flex;
+    min-height: var(--touch-target);
+    cursor: pointer;
+    align-items: center;
+    gap: var(--space-8);
+}
+
+/* Checked state */
+.checkbox:checked {
+    border-color: var(--accent);
+    background: var(--accent);
+}
+
+/* Tick*/
+.checkbox:checked::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 8px;
+    height: 12px;
+    border: solid var(--on-accent);
+    border-width: 0 var(--border-width) var(--border-width) 0;
+    transform: rotate(45deg);
+}
+
+/* Indeterminate */
+.checkbox:indeterminate {
+    border-color: var(--accent);
+    background: var(--surface-chosen);
+}
+
+.checkbox:indeterminate::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 4px;
+    width: 12px;
+    height: var(--border-width);
+    border: 0;
+    background: var(--secondary);
+    transform: none;
+}
+
+/* Disabled */
+.checkbox:disabled {
+    border-color: var(--primary);
+    border-style: dashed;
+    cursor: not-allowed;
+}
+
+.checkbox:disabled:checked,
+.checkbox:disabled:indeterminate {
+    background: var(--surface);
+}
+
+.checkbox:disabled:checked::before {
+    border-color: var(--primary);
+}
+
+.checkbox:disabled:indeterminate::before {
+    background: var(--primary);
+}
+
+.checkbox-field:has(.checkbox:disabled) {
+    color: var(--primary);
+    cursor: not-allowed;
+}
+
+/* High contrast mode*/
+@media (forced-colors: active) {
+    .checkbox:checked::before {
+        forced-color-adjust: none;
+        border-color: CanvasText;
+    }
+
+    .checkbox:indeterminate::before {
+        forced-color-adjust: none;
+        background: CanvasText;
+    }
+
+    .checkbox:disabled:checked::before {
+        border-color: GrayText;
+    }
+
+    .checkbox:disabled:indeterminate::before {
+        background: GrayText;
+    }
+}
