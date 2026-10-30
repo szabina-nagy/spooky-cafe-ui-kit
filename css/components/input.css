@@ -1,0 +1,56 @@
+/* Label above, input below. Fills its container, so the page or screen decides the width */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  width: 100%;
+}
+
+.field-label {
+  font-weight: var(--weight-strong);
+}
+
+/* The default look is the empty state, same height as the buttons*/
+.input {
+  width: 100%;
+  height: var(--control-height);
+  padding: 0 var(--space-16);
+  background: var(--surface);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  transition: border-color var(--motion-fast) var(--ease);
+  caret-color: var(--accent);
+}
+
+/* Placeholder text */
+.input::placeholder {
+  color: var(--primary);
+  opacity: 1;
+}
+
+/* Focused state */
+#input-focused {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+/* Error state*/
+#input-error {
+  border-color: var(--alert);
+}
+
+.alert-message {
+  color: var(--alert);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-8);
+}
+
+/* Disabled */
+#input-disabled {
+  border-style: dashed;
+  color: var(--primary);
+  cursor: not-allowed;
+}

@@ -104,11 +104,44 @@
     <section id="text-input" class="kit-section">
       <h2 class="text-title">Text input</h2>
       <div class="states">
-        <div class="state"><p class="state-label">Empty</p></div>
-        <div class="state"><p class="state-label">Filled</p></div>
-        <div class="state"><p class="state-label">Focused</p></div>
-        <div class="state"><p class="state-label">Error</p></div>
-        <div class="state"><p class="state-label">Disabled</p></div>
+        <div class="state">
+          <p class="state-label">Empty</p>
+          <div class="field">
+            <label class="field-label" for="input-empty">Your order</label>
+            <input class="input" id="input-empty" type="text" placeholder="e.g. Oat Latte">
+          </div>
+        </div>
+        <div class="state">
+          <p class="state-label">Filled</p>
+          <div class="field">
+            <label class="field-label" for="input-filled">Your order</label>
+            <input class="input" id="input-filled" type="text" value="Pumpkin Spice Latte">
+          </div>
+        </div>
+        <div class="state">
+          <p class="state-label">Focused</p>
+          <div class="field">
+            <label class="field-label" for="input-focused">Your order</label>
+            <input class="input" id="input-focused" type="text" value="Pumpkin Spice Latte">
+          </div>
+        </div>
+        <div class="state">
+          <p class="state-label">Error</p>
+          <div class="field">
+            <label class="field-label" for="input-error">Your order</label>
+            <input class="input" id="input-error" type="text" value="Pumpkin Spice Latte" aria-invalid="true" aria-describedby="input-alert-message">
+            <p class="alert-message" id="input-alert-message">
+                <img src="icons/circle-alert.svg" alt="" width="16" height="16">
+              This is not on the menu.</p>
+          </div>
+        </div>
+        <div class="state">
+          <p class="state-label">Disabled</p>
+          <div class="field">
+            <label class="field-label" for="input-disabled">Your order</label>
+            <input class="input" id="input-disabled" type="text" value="Pumpkin Spice Latte" disabled>
+          </div>
+        </div>
       </div>
     </section>
 
