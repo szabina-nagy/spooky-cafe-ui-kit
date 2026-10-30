@@ -1,0 +1,76 @@
+/* Label and switch in a row */
+.toggle-field {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-12);
+  min-height: var(--touch-target);
+  cursor: pointer;
+}
+
+/* Toggle style*/
+.toggle {
+  appearance: none;
+  position: relative;
+  flex-shrink: 0;
+  width: 48px;
+  height: 28px;
+  margin: 0;
+  background: var(--surface);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease);
+}
+
+/* Checked - On*/
+.toggle:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Disabled*/
+.toggle:disabled {
+  border-style: dashed;
+  cursor: not-allowed;
+}
+
+/* Thumb style*/
+.toggle::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  background: var(--secondary);
+  border-radius: 2px;
+  transition: left var(--motion-fast) var(--ease);
+}
+
+.toggle:checked::before {
+  background: var(--surface);
+  left: 24px;
+}
+
+.toggle:disabled::before {
+background: var(--primary);
+}
+
+/* Disabled text*/
+.toggle-field:has(.toggle:disabled) {
+  color: var(--primary);
+  cursor: not-allowed;
+}
+
+/* High contrast mode replaces fills with the system background, which would hide the thumb */
+@media (forced-colors: active) {
+  .toggle::before,
+  .toggle:checked::before {
+    forced-color-adjust: none;
+    background: CanvasText;
+  }
+
+  .toggle:disabled::before {
+    background: GrayText;
+  }
+}
