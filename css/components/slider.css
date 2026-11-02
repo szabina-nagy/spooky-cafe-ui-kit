@@ -1,0 +1,130 @@
+/* Reset default slider and thumb*/
+.slider {
+    appearance: none;
+    width: 100%;
+    height: var(--touch-target);
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+}
+
+/* Slider values*/
+.slider {
+    --track-height: 10px;
+    --thumb-width: 26px;
+    --thumb-height: 26px;
+    --fill: var(--accent);
+    --thumb: var(--secondary);
+    --thumb-edge: var(--ink);
+}
+
+/* Runnable track styling*/
+.slider::-webkit-slider-runnable-track {
+    box-sizing: border-box;
+    height: var(--track-height);
+    background:
+        linear-gradient(to right, var(--fill) calc(var(--value) * 1%), transparent 0) border-box,
+        linear-gradient(var(--surface), var(--surface)) padding-box,
+        var(--border);
+    border: var(--border-width) solid transparent;
+}
+
+/* Same, but for Mozilla*/
+.slider::-moz-range-track {
+    box-sizing: border-box;
+    height: var(--track-height);
+    background:
+        linear-gradient(to right, var(--fill) calc(var(--value) * 1%), transparent 0) border-box,
+        linear-gradient(var(--surface), var(--surface)) padding-box,
+        var(--border);
+    border: var(--border-width) solid transparent;
+}
+
+/* Thumb styling*/
+.slider::-webkit-slider-thumb {
+    box-sizing: border-box;
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+    margin-top: calc((var(--track-height) - 2 * var(--border-width) - var(--thumb-height)) / 2);
+    background: linear-gradient(var(--ink), var(--ink)) center / 2px 12px no-repeat var(--thumb);
+    border: var(--border-width) solid var(--thumb-edge);
+    border-radius: var(--radius);
+}
+
+.slider::-moz-range-thumb {
+    box-sizing: border-box;
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+    background: linear-gradient(var(--ink), var(--ink)) center / 2px 12px no-repeat var(--thumb);
+    border: var(--border-width) solid var(--thumb-edge);
+    border-radius: var(--radius);
+}
+
+/* Focus state*/
+#slider-focused,
+.slider:focus-visible {
+    outline: var(--focus-width) solid transparent;
+    --thumb-edge: var(--focus-ring);
+}
+
+/* Disabled*/
+.slider:disabled {
+    --fill: var(--primary);
+    --thumb: var(--primary);
+    --thumb-edge: var(--primary);
+    cursor: not-allowed;
+}
+
+.field:has(.slider:disabled),
+.field:has(.slider:disabled) .slider-value {
+    color: var(--primary);
+}
+
+/* Slider header*/
+.slider-header {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-8);
+}
+
+.slider-value {
+    font-family: var(--font-heading);
+    font-size: var(--text-button);
+    font-weight: var(--weight-heading);
+    color: var(--accent);
+}
+
+/* High contrast mode */
+@media (forced-colors: active) {
+    .slider {
+        --surface: Canvas;
+        --border: CanvasText;
+        --ink: CanvasText;
+        --fill: Highlight;
+        --thumb: Canvas;
+        --thumb-edge: CanvasText;
+        --focus-ring: Highlight;
+    }
+
+    .slider:disabled {
+        --border: GrayText;
+        --ink: GrayText;
+        --fill: GrayText;
+        --thumb: Canvas;
+        --thumb-edge: GrayText;
+    }
+
+    .slider::-webkit-slider-runnable-track,
+    .slider::-webkit-slider-thumb {
+        forced-color-adjust: none;
+    }
+
+    .slider::-moz-range-track,
+    .slider::-moz-range-thumb {
+        forced-color-adjust: none;
+    }
+}

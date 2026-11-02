@@ -270,10 +270,37 @@
     <section id="slider" class="kit-section">
       <h2 class="text-title">Slider</h2>
       <div class="states">
-        <div class="state"><p class="state-label">Default</p></div>
-        <div class="state"><p class="state-label">Focused</p></div>
-        <div class="state"><p class="state-label">Disabled</p></div>
-      </div>
+        <div class="state">
+          <p class="state-label">Default</p>
+          <div class="field">
+            <div class="slider-header">
+              <label class="field-label" for="slider-default">Radio volume</label>
+              <span class="slider-value" aria-hidden="true">60%</span>
+            </div>
+            <input class="slider" id="slider-default" type="range" min="0" max="100" value="60" aria-valuetext="60%" style="--value: 60">
+          </div>
+          </div>
+        <div class="state">
+          <p class="state-label">Focused</p>
+          <div class="field">
+            <div class="slider-header">
+              <label class="field-label" for="slider-focused">Radio volume</label>
+              <span class="slider-value" aria-hidden="true">60%</span>
+            </div>
+            <input class="slider" id="slider-focused" type="range" min="0" max="100" value="60" aria-valuetext="60%" style="--value: 60">
+          </div>
+        </div>
+        <div class="state">
+          <p class="state-label">Disabled</p>
+            <div class="field">
+              <div class="slider-header">
+                <label class="field-label" for="slider-disabled">Radio volume</label>
+                <span class="slider-value" aria-hidden="true">60%</span>
+              </div>
+              <input class="slider" id="slider-disabled" type="range" min="0" max="100" value="60" aria-valuetext="60%" style="--value: 60" disabled>
+            </div>
+          </div>
+        </div>
     </section>
 
     <section id="tabs" class="kit-section">
