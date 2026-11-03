@@ -1,0 +1,51 @@
+.tabs {
+    display: flex;
+    border-bottom: var(--bar-sm) solid var(--border);
+    overflow-x: auto;
+}
+
+/* Reset and style buttons*/
+.tab {
+    width: var(--tab-width);
+    appearance: none;
+    border: none;
+    background: none;
+    height: var(--control-height);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: var(--weight-heading);
+    font-family: var(--font-heading);
+    font-size: 20px;
+    border-radius: var(--radius) var(--radius) 0 0;
+    border-bottom: var(--bar-sm) solid transparent;
+    transition: background-color var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease), color var(--motion-fast) var(--ease);
+    flex-shrink: 0;
+}
+
+/* hover state*/
+.tab:hover,
+.tab.is-hover {
+    background: var(--ghost-hover);
+    border-bottom-color: var(--primary);
+}
+
+/* selected state*/
+.tab[aria-selected="true"] {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* disabled state*/
+.tab:disabled {
+    color: var(--primary);
+    cursor: not-allowed;
+    background: none;
+    border-bottom-color: transparent;
+}
+
+/* focus ring -> inside the tab*/
+.tab:focus-visible,
+.tab.is-focus {
+    outline: var(--focus-width) solid var(--focus-ring);
+    outline-offset: calc(-1 * var(--focus-width));
+}

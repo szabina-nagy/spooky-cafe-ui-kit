@@ -7,7 +7,7 @@ The project is still in the design phase, so most things here are open. Figma le
 A portfolio piece for a UX/UI designer and engineer, showing that I can both design and build. It is the UI kit for an imagined game about running a little cafe in a spooky small town. The same components exist in Figma and in code, driven by one set of design tokens, and are shown on a live page plus two composed game screens.
 
 * Owner: Szabina Nagy
-* Hard deadline: 31 October 2026
+* Hard deadline: 5 November 2026
 
 ## Mood
 

@@ -82,6 +82,9 @@
   /* Icons */
   --icon-size: 24px;
   --icon-stroke: 2px;
+
+  /* Tabs*/
+--tab-width: 196px;
 }
 
 /* Layout grid */
