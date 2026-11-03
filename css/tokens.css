@@ -41,11 +41,12 @@
   --font-heading: "Barlow Condensed", "Arial Narrow", sans-serif;
   --font-body: "DM Sans", system-ui, sans-serif;
   --text-button: 1.125rem;          /* 18px bold uppercase, tracking 0.05em. Buttons and the slider value. Tab labels are 20px */
-  --text-title: 1.5rem;             /* 24px extrabold italic uppercase. Titles in card and modal */
+  --text-title: 2rem;             /* 32px extrabold italic uppercase. Card and modal*/
   --text-subtitle: 1rem;            /* 16px semibold DM Sans. Subtitles in list row and progress bar */
   --text-body: 1rem;                /* 16px regular. Body text */
   --leading-body: 1.3125;           /* Figma Auto for DM Sans 16, measured as 21 px per line. Body and subtitle */
   --leading-heading: 1.45;          /* 145%. Barlow Condensed in titles and buttons */
+  --leading-title: 1.15;            /*115%. Cards and modal titles*/
   --weight-body: 400;
   --weight-strong: 600;
   --weight-heading: 700;

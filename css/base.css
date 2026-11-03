@@ -69,7 +69,7 @@ a {
   font-size: var(--text-title);
   font-weight: var(--weight-title);
   font-style: italic;
-  line-height: var(--leading-heading);
+  line-height: var(--leading-title);
   letter-spacing: var(--tracking-heading);
   text-transform: uppercase;
 }
