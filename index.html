@@ -331,10 +331,31 @@
     <section id="chips" class="kit-section">
       <h2 class="text-title">Chips</h2>
       <div class="states">
-        <div class="state"><p class="state-label">Default</p></div>
-        <div class="state"><p class="state-label">Selected</p></div>
-        <div class="state"><p class="state-label">Removable</p></div>
-        <div class="state"><p class="state-label">Disabled</p></div>
+        <div class="state">
+          <p class="state-label">Default</p>
+          <button class="chip" type="button" aria-pressed="false">
+            <img  class="chip-check" src="icons/check.svg" alt="" width="16" height="16">
+            Vegan</button>
+        </div>
+        <div class="state">
+          <p class="state-label">Selected</p>
+          <button class="chip" type="button" aria-pressed="true">
+            <img class="chip-check" src="icons/check.svg" alt="" width="16" height="16">
+            Gluten-free</button>
+        </div>
+        <div class="state">
+          <p class="state-label">Removable</p>
+          <span class="chip">
+            Dairy-free
+            <button class="chip-remove" type="button" aria-label="Remove Dairy-free">
+              <img src="icons/x.svg" alt="" width="16" height="16">
+            </button>
+          </span>
+        </div>
+        <div class="state">
+          <p class="state-label">Disabled</p>
+          <button class="chip" type="button" aria-pressed="false" disabled>Vegan</button>
+        </div>
       </div>
     </section>
 

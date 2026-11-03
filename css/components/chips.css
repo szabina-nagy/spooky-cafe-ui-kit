@@ -1,0 +1,51 @@
+/* reset and style chips*/
+.chip {
+    appearance: none;
+    height: var(--touch-target);
+    padding: 0 var(--space-12);
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius);
+    display: inline-flex;
+    align-items: center;
+    background: var(--ghost-pressed);
+    gap: var(--space-8);
+}
+
+.chip[aria-pressed] {
+    cursor: pointer;
+}
+
+/* selected state*/
+.chip[aria-pressed="true"] {
+    color: var(--on-accent);
+    border-color: var(--accent);
+    background: var(--accent);
+}
+
+/* disabled*/
+.chip:disabled {
+    color: var(--primary);
+    cursor: not-allowed;
+    background: none;
+    border-color: var(--primary);
+    border-style: dashed;
+}
+
+/* x remove button*/
+.chip-remove {
+    appearance: none;
+    border: none;
+    background: none;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* chip check */
+.chip[aria-pressed="false"] .chip-check {
+    display: none;
+}
