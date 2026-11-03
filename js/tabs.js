@@ -1,15 +1,6 @@
 document.querySelectorAll(".tabs").forEach((tabList) => {
     const tabs = [...tabList.querySelectorAll('[role="tab"]')];
 
-    function select(chosen) {
-        tabs.forEach((tab) => {
-            tab.setAttribute("aria-selected", "false");
-            tab.setAttribute("tabindex", "-1");
-        });
-        chosen.setAttribute("aria-selected", "true");
-        chosen.setAttribute("tabindex", "0");
-    }
-
     tabs.forEach((tab) => {
         tab.addEventListener("click", () => select(tab));
     });
@@ -35,4 +26,23 @@ document.querySelectorAll(".tabs").forEach((tabList) => {
         select(enabled[next]);
         enabled[next].focus();
     });
+
+    function select(chosen) {
+        tabs.forEach((tab) => {
+            tab.setAttribute("aria-selected", "false");
+            tab.setAttribute("tabindex", "-1");
+            const panel = document.getElementById(tab.getAttribute("aria-controls"));
+            if (panel) {
+                panel.hidden = true;
+            }
+        });
+    
+        chosen.setAttribute("aria-selected", "true");
+        chosen.setAttribute("tabindex", "0");
+        const chosenPanel = document.getElementById(chosen.getAttribute("aria-controls"));
+        if (chosenPanel) {
+            chosenPanel.hidden = false;
+        }
+    }
+
 });

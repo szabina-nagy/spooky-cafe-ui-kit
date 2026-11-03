@@ -92,11 +92,23 @@ h1 {
 }
 
 /* tabs*/
+/* Captions and tabs scroll together on narrow screens, like the states table */
+.tab-states-wrap {
+  overflow-x: auto;
+}
+
+/* Full width, so the wrapper scrolls instead of the tablist */
+.tab-states-wrap .tabs {
+  width: max-content;
+}
+
 .tab-captions {
   display: flex;
   margin-bottom: var(--space-16);
 }
 
+/* flex-shrink keeps each caption as wide as its tab */
 .tab-captions span {
   width: var(--tab-width);
+  flex-shrink: 0;
 }

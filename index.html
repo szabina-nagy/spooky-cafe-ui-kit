@@ -305,19 +305,27 @@
 
     <section id="tabs" class="kit-section">
       <h2 class="text-title">Tabs</h2>
-      <!-- One tablist holds all four states, so the labels sit in their own row above it -->
-      <div class="tab-captions" aria-hidden="true">
-        <span>Selected</span>
-        <span>Unselected</span>
-        <span>Hover</span>
-        <span>Disabled</span>
+      <!-- One tablist holds all four states, so the labels sit in their own row above it.
+           The wrapper scrolls both rows together on narrow screens -->
+      <div class="tab-states-wrap" role="region" aria-label="Tab states" tabindex="0">
+        <div class="tab-captions" aria-hidden="true">
+          <span>Selected</span>
+          <span>Unselected</span>
+          <span>Hover</span>
+          <span>Disabled</span>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Menu">
+          <button class="tab" type="button" role="tab" aria-selected="true" aria-controls="panel-coffees" id="tab-coffees">Coffees</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-cookies" id="tab-cookies">Cookies</button>
+          <button class="tab is-hover" type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-pastries" id="tab-pastries">Pastries</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-breakfast" id="tab-breakfast" disabled>Breakfast</button>
+        </div>
       </div>
-      <div class="tabs" role="tablist" aria-label="Menu">
-        <button class="tab" type="button" role="tab" aria-selected="true">Coffees</button>
-        <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1">Cookies</button>
-        <button class="tab is-hover" type="button" role="tab" aria-selected="false" tabindex="-1">Pastries</button>
-        <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" disabled>Breakfast</button>
-      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-coffees" aria-labelledby="tab-coffees" tabindex="0">...</div>
+      <div class="tab-panel" role="tabpanel" id="panel-cookies" aria-labelledby="tab-cookies" tabindex="0" hidden>...</div>
+      <div class="tab-panel" role="tabpanel" id="panel-pastries" aria-labelledby="tab-pastries" tabindex="0" hidden>...</div>
+      <div class="tab-panel" role="tabpanel" id="panel-breakfast" aria-labelledby="tab-breakfast" tabindex="0" hidden>...</div>
     </section>
 
     <section id="chips" class="kit-section">
@@ -376,7 +384,13 @@
           <div class="state"><p class="state-label">Radio</p></div>
           <div class="state"><p class="state-label">Chip</p></div>
           <div class="state"><p class="state-label">List row</p></div>
-          <div class="state"><p class="state-label">Tab</p></div>
+          <div class="state">
+            <p class="state-label">Tab</p>
+            <!-- A tab has to sit inside a tablist, so each example gets its own -->
+            <div class="tabs" role="tablist" aria-label="Menu">
+              <button class="tab is-focus" type="button" role="tab" aria-selected="false">Cookies</button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="variant">
@@ -387,7 +401,12 @@
           <div class="state"><p class="state-label">Radio</p></div>
           <div class="state"><p class="state-label">Chip</p></div>
           <div class="state"><p class="state-label">List row</p></div>
-          <div class="state"><p class="state-label">Tab</p></div>
+          <div class="state">
+            <p class="state-label">Tab</p>
+            <div class="tabs" role="tablist" aria-label="Menu">
+              <button class="tab is-focus" type="button" role="tab" aria-selected="true">Coffees</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
