@@ -7,7 +7,7 @@
     border-radius: var(--radius);
     display: inline-flex;
     align-items: center;
-    background: var(--ghost-pressed);
+    background: var(--surface);
     gap: var(--space-8);
 }
 
