@@ -413,10 +413,62 @@
     <section id="list-row" class="kit-section">
       <h2 class="text-title">List row</h2>
       <div class="states">
-        <div class="state"><p class="state-label">Default</p></div>
-        <div class="state"><p class="state-label">Hover</p></div>
-        <div class="state"><p class="state-label">Selected</p></div>
-        <div class="state"><p class="state-label">Disabled</p></div>
+        <div class="state">
+          <p class="state-label">Default</p>
+          <button class="list-row" type="button" aria-pressed="false">
+            <span class="list-row-content">
+              <span class="list-row-header">
+                <img class="list-row-icon" src="icons/coffee-lime.svg" alt="" width="24" height="24">
+                <span class="list-row-title text-button">Pumpkin Spice Latte</span>
+              </span>
+              <span class="list-row-text">Oat milk, large</span>
+            </span>
+            <img class="list-row-check" src="icons/check-lime.svg" alt="" width="16" height="16">
+            <img class="list-row-chevron" src="icons/chevron-right.svg" alt="" width="16" height="16">
+          </button>
+        </div>
+        <div class="state">
+          <p class="state-label">Hover</p>
+          <button class="list-row is-hover" type="button" aria-pressed="false">
+            <span class="list-row-content">
+              <span class="list-row-header">
+                <img class="list-row-icon" src="icons/calendar.svg" alt="" width="24" height="24">
+                <span class="list-row-title text-button">7:30pm, Table for two</span>
+              </span>
+              <span class="list-row-text">Booked by Alex</span>
+            </span>
+            <img class="list-row-check" src="icons/check-lime.svg" alt="" width="16" height="16">
+            <img class="list-row-chevron" src="icons/chevron-right.svg" alt="" width="16" height="16">
+          </button>
+        </div>
+        <div class="state">
+          <p class="state-label">Selected</p>
+          <button class="list-row" type="button" aria-pressed="true">
+            <span class="list-row-content">
+              <span class="list-row-header">
+                <img class="list-row-icon" src="icons/ghost.svg" alt="" width="24" height="24">
+                <span class="list-row-title text-button">Spooky shadows, Table 2</span>
+              </span>
+              <span class="list-row-text">Reported 2 hours ago</span>
+            </span>
+            <img class="list-row-check" src="icons/check-lime.svg" alt="" width="16" height="16">
+            <img class="list-row-chevron" src="icons/chevron-right.svg" alt="" width="16" height="16">
+          </button>
+        </div>
+        <div class="state">
+          <p class="state-label">Disabled</p>
+          <button class="list-row" type="button" aria-pressed="false" disabled>
+            <span class="list-row-content">
+              <span class="list-row-header">
+                <img class="list-row-icon" src="icons/pastry.svg" alt="" width="24" height="24">
+                <span class="list-row-title text-button">Almond Croissant</span>
+              </span>
+              <span class="list-row-text">Available in gluten-free</span>
+            </span>
+            <img class="list-row-check" src="icons/check-lime.svg" alt="" width="16" height="16">
+            <img class="list-row-chevron" src="icons/chevron-right-purple.svg" alt="" width="16" height="16">
+          </button>
+        </div>
       </div>
     </section>
 
