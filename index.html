@@ -475,9 +475,39 @@
     <section id="progress-bar" class="kit-section">
       <h2 class="text-title">Progress bar</h2>
       <div class="states">
-        <div class="state"><p class="state-label">In progress</p></div>
-        <div class="state"><p class="state-label">Complete</p></div>
-        <div class="state"><p class="state-label">Alert</p></div>
+        <div class="state">
+          <p class="state-label">In progress</p>
+          <div class="field">
+            <div class="progress-bar-header">
+              <label class="field-label" for="progress-bar-in-progress">Caffeine level</label>
+              <img class="progress-bar-icon" src="icons/battery.svg" alt="" width="24" height="24">
+            </div>
+            <progress class="progress-bar" id="progress-bar-in-progress" value="3" max="5" aria-valuetext="3 of 5 coffees">3 of 5 coffees</progress>
+            <span class="progress-bar-value" aria-hidden="true">3 of 5 coffees</span>
+          </div>
+        </div>
+        <div class="state">
+          <p class="state-label">Complete</p>
+          <div class="field">
+            <div class="progress-bar-header">
+              <label class="field-label" for="progress-bar-in-progress">Caffeine level</label>
+              <img class="progress-bar-icon" src="icons/battery.svg" alt="" width="24" height="24">
+            </div>
+            <progress class="progress-bar" id="progress-bar-in-progress" value="5" max="5" aria-valuetext="5 of 5 coffees">5 of 5 coffees</progress>
+            <span class="progress-bar-value" aria-hidden="true">5 of 5 coffees</span>
+          </div>        
+        </div>
+        <div class="state">
+          <p class="state-label">Alert</p>
+          <div class="field">
+            <div class="progress-bar-header">
+              <label class="field-label" for="progress-bar-in-progress">Caffeine level</label>
+              <img class="progress-bar-icon" src="icons/battery.svg" alt="" width="24" height="24">
+            </div>
+            <progress class="progress-bar" id="progress-bar-in-progress" value="1" max="5" aria-valuetext="1 of 5 coffees">1 of 5 coffees</progress>
+            <span class="progress-bar-value" aria-hidden="true">1 of 5 coffees</span>
+          </div>
+        </div>
       </div>
     </section>
 
