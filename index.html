@@ -514,8 +514,38 @@
     <section id="modal" class="kit-section">
       <h2 class="text-title">Modal</h2>
       <div class="states">
-        <div class="state"><p class="state-label">Confirmation</p></div>
-        <div class="state"><p class="state-label">Destructive</p></div>
+        <div class="state">
+          <p class="state-label">Confirmation</p>
+          <div class="modal">
+            <div class="modal-header">
+              <h3 class="modal-title text-title">Add to inventory?</h3>
+              <button type="button" class="modal-close" aria-label="close">
+                <img src="icons/x-cream.svg" alt="" width="24" height="24">
+              </button>
+            </div>
+            <p class="modal-text">Pumpkin Spice Latte placed to your basket.</p>
+            <div class="modal-buttons">
+              <button type="button" class="button button-secondary">Remove it</button>
+              <button type="button" class="button button-primary">Add it</button>
+            </div>
+          </div>
+        </div>
+        <div class="state">
+          <p class="state-label">Destructive</p>
+          <div class="modal">
+            <div class="modal-header">
+              <h3 class="modal-title text-title">Reset all settings?</h3>
+              <button type="button" class="modal-close" aria-label="Close">
+                <img src="icons/x-cream.svg" alt="" width="24" height="24">
+              </button>
+            </div>
+            <p class="modal-text">Your table and your order will go back to how they started.</p>
+            <div class="modal-buttons">
+              <button type="button" class="button button-secondary">Cancel</button>
+              <button type="button" class="button button-alert">Reset</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
