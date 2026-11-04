@@ -31,6 +31,8 @@
 
   /* Alert: burnt sienna */
   --alert: #ef7b4b;                 /* Error text and edges 6.68 on ink, 6.13 on surface. Fill for destructive buttons, ink text 6.68 */
+  --alert-hover: #f4956d;
+  --alert-pressed: #a35232;
   --alert-on-fill: var(--ink);
 
   /* Ghost button fills. Lime text on them */

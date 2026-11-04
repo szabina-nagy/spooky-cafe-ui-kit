@@ -100,3 +100,22 @@
   box-shadow: none;
   cursor: not-allowed;
 }
+
+/* alert button*/
+.button-alert {
+  background: var(--alert);
+  border-color: var(--alert);
+  color: var(--on-accent);
+}
+
+.button-alert:hover,
+.button-alert.is-hover {
+  background: var(--alert-hover);
+  border-color: var(--alert-hover);
+}
+
+.button-alert:active,
+.button-alert.is-pressed {
+  background: var(--alert-pressed);
+  border-color: var(--alert);
+}
