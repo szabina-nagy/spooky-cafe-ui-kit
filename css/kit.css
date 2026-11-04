@@ -97,6 +97,11 @@ h1 {
   grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr));
 }
 
+/*list row states*/
+#list-row .states {
+  grid-template-columns: repeat(auto-fill, minmax(min(270px, 100%), 1fr));
+}
+
 /* tabs*/
 /* Captions and tabs scroll together on narrow screens, like the states table */
 .tab-states-wrap {

@@ -1,9 +1,71 @@
 .list-row {
   position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: var(--border-width) solid var(--border);
+  padding: var(--space-12);
+  border-radius: var(--radius);
+  background: var(--surface);
+  text-align: left;
+}
+
+.list-row-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.list-row-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.list-row-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+}
+
+.list-row-text {
+  color: var(--secondary-hover);
+}
+
+.list-row:disabled .list-row-text {
+  color: var(--primary);
+}
+
+/* hover state*/
+.list-row:hover,
+.list-row.is-hover {
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
 }
 
 /* Selected: the left edge grows to 4 px. Drawn over the border, so the content does not move */
-.list-row.is-selected::before {
+.list-row[aria-pressed="true"] {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Selected swaps the chevron icon for check */
+.list-row-check {
+  display: none;
+}
+
+.list-row[aria-pressed="true"] .list-row-chevron {
+  display: none;
+}
+
+.list-row[aria-pressed="true"] .list-row-check {
+  display: block;
+}
+
+
+/* Selected: the left edge grows to 4 px. Drawn over the border, so the content does not move */
+.list-row[aria-pressed="true"]::before {
   content: "";
   position: absolute;
   top: calc(var(--border-width) * -1);
@@ -12,4 +74,14 @@
   width: var(--bar-sm);
   background: var(--accent);
   border-radius: var(--radius) 0 0 var(--radius);
+}
+
+/* Disabled state, last, so it beats hover */
+.list-row:disabled {
+  border-color: var(--primary);
+  border-style: dashed;
+  color: var(--primary);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
 }
