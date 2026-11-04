@@ -1,0 +1,65 @@
+/* Reset default progress bar*/
+.progress-bar {
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    border: var(--border-width) solid var(--border);
+    background: transparent;
+}
+
+/* Chrome track*/
+.progress-bar::-webkit-progress-bar {
+    background: transparent;
+}
+
+/* fill */
+.progress-bar::-webkit-progress-value {
+    background: var(--primary);
+}
+
+.progress-bar::-moz-progress-bar {
+    background: var(--primary);
+}
+
+/* Header and text styling*/
+.progress-bar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-heading);
+    font-size: 20px;
+}
+
+.progress-bar-value {
+    color: var(--secondary-hover);
+}
+
+/* complete state*/
+.progress-bar.is-complete {
+    border-color: var(--accent);
+}
+
+.progress-bar.is-complete::-webkit-progress-value {
+    background: var(--accent);
+}
+
+.progress-bar.is-complete::-moz-progress-bar {
+    background: var(--accent);
+}
+
+/* alert state*/
+.field:has(.progress-bar.is-alert) .progress-bar-value {
+    color: var(--alert);
+}
+
+.progress-bar.is-alert {
+    border-color: var(--alert);
+}
+
+.progress-bar.is-alert::-webkit-progress-value {
+    background: var(--alert);
+}
+
+.progress-bar.is-alert::-moz-progress-bar {
+    background: var(--alert);
+}
