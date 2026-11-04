@@ -1,8 +1,36 @@
 .card {
   position: relative;
+  width: 100%;
+  border: var(--border-width) solid var(--border);
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* card header*/
+.card-header {
+  display: flex;
+  border-bottom: var(--border-width) solid var(--accent);
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-12);
+}
+
+/*card cta*/
+.card-cta {
+  margin-top: var(--space-12);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-weight: bold;
 }
 
 /* Selected: the left edge grows to 6 px. Drawn over the border, so the content does not move */
+.card.is-selected {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-lg);
+}
+
 .card.is-selected::before {
   content: "";
   position: absolute;
@@ -12,4 +40,41 @@
   width: var(--bar-lg);
   background: var(--accent);
   border-radius: var(--radius) 0 0 var(--radius);
+}
+
+/* Selected swaps the coffee icon for a lime check */
+.card-check {
+  display: none;
+}
+
+.card.is-selected .card-icon {
+  display: none;
+}
+
+.card.is-selected .card-check {
+  display: block;
+}
+
+/* link covers whole card, can click anywhere*/
+.card-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* hover state*/
+.card:hover,
+.card.is-hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+/* Keyboard focus on the link rings the whole card */
+.card:has(.card-cta:focus-visible) {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.card-cta:focus-visible {
+  outline: none;
 }
