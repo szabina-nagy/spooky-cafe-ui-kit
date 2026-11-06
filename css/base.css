@@ -74,7 +74,8 @@ a {
   text-transform: uppercase;
 }
 
-:focus-visible {
+:focus-visible,
+.is-focus {
   outline: var(--focus-width) solid var(--focus-ring);
   outline-offset: var(--focus-offset);
   box-shadow: none !important;

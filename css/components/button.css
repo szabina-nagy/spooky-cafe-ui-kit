@@ -18,13 +18,6 @@
   transition: background-color var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease);
 }
 
-/* Kit page only: shows the focus ring without real focus. Matches :focus-visible in base.css */
-.button.is-focus {
-  outline: var(--focus-width) solid var(--focus-ring);
-  outline-offset: var(--focus-offset);
-  box-shadow: none;
-}
-
 /* Primary. The border matches the fill, so it only shows in high contrast mode */
 .button-primary {
   background: var(--accent);

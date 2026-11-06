@@ -557,14 +557,49 @@
       <div class="variant">
         <h3>Focus on a resting component</h3>
         <div class="states">
-          <div class="state"><p class="state-label">Toggle</p></div>
-          <div class="state"><p class="state-label">Checkbox</p></div>
-          <div class="state"><p class="state-label">Radio</p></div>
-          <div class="state"><p class="state-label">Chip</p></div>
-          <div class="state"><p class="state-label">List row</p></div>
+          <div class="state">
+            <p class="state-label">Toggle</p>
+            <label class="toggle-field">
+              <input class="toggle is-focus" type="checkbox" role="switch">
+              Fireplace
+            </label>
+          </div>
+          <div class="state">
+            <p class="state-label">Checkbox</p>
+            <label class="checkbox-field">
+            <input class="checkbox is-focus" type="checkbox">
+            Keep me posted
+          </label>
+          </div>
+          <div class="state">
+            <p class="state-label">Radio</p>
+            <label class="radio-field">
+              <input class="radio is-focus" type="radio" name="toppings-4" value="cinnamon">
+              Cinnamon
+            </label>
+          </div>
+          <div class="state">
+            <p class="state-label">Chip</p>
+            <button class="chip is-focus" type="button" aria-pressed="false">
+            <img  class="chip-check" src="icons/check.svg" alt="" width="16" height="16">
+            Vegan</button>
+          </div>
+          <div class="state">
+            <p class="state-label">List row</p>
+            <button class="list-row is-focus" type="button" aria-pressed="false">
+            <span class="list-row-content">
+              <span class="list-row-header">
+                <img class="list-row-icon" src="icons/coffee-lime.svg" alt="" width="24" height="24">
+                <span class="list-row-title">Pumpkin Spice Latte</span>
+              </span>
+              <span class="list-row-text">Oat milk, large</span>
+            </span>
+            <img class="list-row-check" src="icons/check-lime.svg" alt="" width="16" height="16">
+            <img class="list-row-chevron" src="icons/chevron-right.svg" alt="" width="16" height="16">
+          </button>
+          </div>
           <div class="state">
             <p class="state-label">Tab</p>
-            <!-- A tab has to sit inside a tablist, so each example gets its own -->
             <div class="tabs" role="tablist" aria-label="Menu">
               <button class="tab is-focus" type="button" role="tab" aria-selected="false">Cookies</button>
             </div>
@@ -574,11 +609,47 @@
       <div class="variant">
         <h3>Focus on a chosen component</h3>
         <div class="states">
-          <div class="state"><p class="state-label">Toggle</p></div>
-          <div class="state"><p class="state-label">Checkbox</p></div>
-          <div class="state"><p class="state-label">Radio</p></div>
-          <div class="state"><p class="state-label">Chip</p></div>
-          <div class="state"><p class="state-label">List row</p></div>
+          <div class="state">
+            <p class="state-label">Toggle</p>
+            <label class="toggle-field">
+            <input class="toggle is-focus" type="checkbox" role="switch" checked>
+            Fireplace
+          </label>
+          </div>
+          <div class="state">
+            <p class="state-label">Checkbox</p>
+            <label class="checkbox-field">
+            <input class="checkbox is-focus" type="checkbox" checked>
+            Keep me posted
+          </label>
+          </div>
+          <div class="state">
+            <p class="state-label">Radio</p>
+            <label class="radio-field">
+              <input class="radio is-focus" type="radio" name="toppings-4" value="cinnamon" checked>
+              Cinnamon
+            </label>
+          </div>
+          <div class="state">
+            <p class="state-label">Chip</p>
+            <button class="chip is-focus" type="button" aria-pressed="true">
+            <img class="chip-check" src="icons/check.svg" alt="" width="16" height="16">
+            Gluten-free</button>
+          </div>
+          <div class="state">
+            <p class="state-label">List row</p>
+            <button class="list-row is-focus" type="button" aria-pressed="true">
+            <span class="list-row-content">
+              <span class="list-row-header">
+                <img class="list-row-icon" src="icons/ghost.svg" alt="" width="24" height="24">
+                <span class="list-row-title">Spooky shadows, Table 2</span>
+              </span>
+              <span class="list-row-text">Reported 2 hours ago</span>
+            </span>
+            <img class="list-row-check" src="icons/check-lime.svg" alt="" width="16" height="16">
+            <img class="list-row-chevron" src="icons/chevron-right.svg" alt="" width="16" height="16">
+          </button>
+          </div>
           <div class="state">
             <p class="state-label">Tab</p>
             <div class="tabs" role="tablist" aria-label="Menu">
