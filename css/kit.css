@@ -128,3 +128,14 @@ h1 {
   width: var(--tab-width);
   flex-shrink: 0;
 }
+
+/* icons */
+.icon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+  align-items: center;
+}
