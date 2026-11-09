@@ -23,6 +23,7 @@
   align-items: center;
   gap: var(--space-8);
   font-weight: bold;
+  text-decoration: none;
 }
 
 /* Selected: the left edge grows to 6 px. Drawn over the border, so the content does not move */
@@ -77,4 +78,9 @@
 
 .card-cta:focus-visible {
   outline: none;
+}
+
+/* card text*/
+.card-text {
+  color: var(--text-muted);
 }

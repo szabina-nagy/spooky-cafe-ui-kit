@@ -58,7 +58,7 @@ a {
 }
 
 .text-subtitle {
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-size: var(--text-subtitle);
   font-weight: var(--weight-strong);
   line-height: var(--leading-body);

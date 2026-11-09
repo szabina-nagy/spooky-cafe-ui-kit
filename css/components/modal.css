@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--space-24);
+    margin-bottom: 20px;
 }
 
 .modal-buttons {

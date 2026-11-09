@@ -26,7 +26,8 @@
 
 .list-row-title {
   font-family: var(--font-heading);
-  font-size: 20px;
+  font-size: var(--text-subtitle);
+  font-weight: var(--weight-strong);
 }
 
 .list-row-text {

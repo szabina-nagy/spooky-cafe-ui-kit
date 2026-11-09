@@ -3,8 +3,10 @@
     appearance: none;
     width: 100%;
     height: 10px;
-    border: var(--border-width) solid var(--border);
+    border: 0;
+    outline: var(--border-width) solid var(--border);
     background: transparent;
+    outline-offset: calc(-1 * var(--border-width));
 }
 
 /* Chrome track*/
@@ -27,7 +29,8 @@
     align-items: center;
     justify-content: space-between;
     font-family: var(--font-heading);
-    font-size: 20px;
+    font-size: var(--text-subtitle);
+    font-weight: var(--weight-strong);
 }
 
 .progress-bar-value {
@@ -36,7 +39,7 @@
 
 /* complete state*/
 .progress-bar.is-complete {
-    border-color: var(--accent);
+    outline-color: var(--accent);
 }
 
 .progress-bar.is-complete::-webkit-progress-value {
@@ -53,7 +56,7 @@
 }
 
 .progress-bar.is-alert {
-    border-color: var(--alert);
+    outline-color: var(--alert);
 }
 
 .progress-bar.is-alert::-webkit-progress-value {

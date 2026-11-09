@@ -6,10 +6,6 @@
   width: 100%;
 }
 
-.field-label {
-  font-weight: var(--weight-strong);
-}
-
 /* The default look is the empty state, same height as the buttons*/
 .input {
   width: 100%;
