@@ -133,6 +133,98 @@ h1 {
   flex-shrink: 0;
 }
 
+/* Tab panel demo: a small cafe menu on a surface, hanging from the tab bar.
+   As wide as the four tabs. The tab bar line is its top edge */
+#tabs .tab-panel {
+  width: min(4 * var(--tab-width), 100%);
+  padding: var(--space-8) var(--space-24);
+  background: var(--surface);
+  border: var(--border-width) solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Icon, name and note, price on the right. A thin line between items */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-16) 0;
+}
+
+.menu-item + .menu-item {
+  border-top: 1px solid var(--border);
+}
+
+.menu-item-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Same as the list row title */
+.menu-item-name {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: var(--weight-strong);
+}
+
+/* Muted secondary on surface 9.0 */
+.menu-item-note {
+  color: var(--text-muted);
+}
+
+/* Lime on surface 14.32 */
+.menu-item-price {
+  font-family: var(--font-heading);
+  font-size: var(--text-button);
+  font-weight: var(--weight-heading);
+  color: var(--accent);
+}
+
+/* Teaser: the menu stays hidden until a tab is chosen. kit.js removes is-teasing */
+.menu-teaser {
+  display: none;
+}
+
+#tabs.is-teasing .menu-teaser {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-16) 0;
+  color: var(--text-muted);
+}
+
+#tabs.is-teasing .menu-list {
+  display: none;
+}
+
+/* Items fade in one after another each time a panel opens. Reduced motion turns this off in base.css */
+.menu-item {
+  animation: menu-reveal 240ms var(--ease) backwards;
+}
+
+.menu-item:nth-child(2) {
+  animation-delay: 80ms;
+}
+
+.menu-item:nth-child(3) {
+  animation-delay: 160ms;
+}
+
+@keyframes menu-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
 /* icons */
 .icon-list {
   list-style: none;
@@ -285,4 +377,9 @@ h1 {
   height: var(--size);
   background: var(--accent);
   border-radius: var(--radius);
+}
+
+/* state label*/
+.state-label {
+  color: var(--text-muted);
 }

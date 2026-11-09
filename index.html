@@ -30,8 +30,8 @@
   <script src="js/slider.js" defer></script>
   <script src="js/tabs.js" defer></script>
   <script src="js/chips.js" defer></script>
-  <script src="js/progress.js" defer></script>
   <script src="js/modal.js" defer></script>
+  <script src="js/kit.js" defer></script>
 </head>
 <body>
 
@@ -303,7 +303,7 @@
         </div>
     </section>
 
-    <section id="tabs" class="kit-section">
+    <section id="tabs" class="kit-section is-teasing">
       <h2 class="text-title">Tabs</h2>
       <!-- One tablist holds all four states, so the labels sit in their own row above it.
            The wrapper scrolls both rows together on narrow screens -->
@@ -322,10 +322,114 @@
         </div>
       </div>
 
-      <div class="tab-panel" role="tabpanel" id="panel-coffees" aria-labelledby="tab-coffees" tabindex="0">...</div>
-      <div class="tab-panel" role="tabpanel" id="panel-cookies" aria-labelledby="tab-cookies" tabindex="0" hidden>...</div>
-      <div class="tab-panel" role="tabpanel" id="panel-pastries" aria-labelledby="tab-pastries" tabindex="0" hidden>...</div>
-      <div class="tab-panel" role="tabpanel" id="panel-breakfast" aria-labelledby="tab-breakfast" tabindex="0" hidden>...</div>
+      <div class="tab-panel" role="tabpanel" id="panel-coffees" aria-labelledby="tab-coffees" tabindex="0">
+        <p class="menu-teaser">
+          <img src="icons/ghost.svg" alt="" width="24" height="24">
+          Psst. Pick a tab to see tonight's menu.
+        </p>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <img src="icons/coffee-lime.svg" alt="" width="24" height="24">
+            <span class="menu-item-text">
+              <span class="menu-item-name">Pumpkin Spice Latte</span>
+              <span class="menu-item-note">Pumpkin, spice, and everything nice</span>
+            </span>
+            <span class="menu-item-price">$4.50</span>
+          </li>
+          <li class="menu-item">
+            <img src="icons/coffee-lime.svg" alt="" width="24" height="24">
+            <span class="menu-item-text">
+              <span class="menu-item-name">Oat Latte</span>
+              <span class="menu-item-note">Smooth and velvety</span>
+            </span>
+            <span class="menu-item-price">$3.80</span>
+          </li>
+          <li class="menu-item">
+            <img src="icons/coffee-lime.svg" alt="" width="24" height="24">
+            <span class="menu-item-text">
+              <span class="menu-item-name">Black Cat Espresso</span>
+              <span class="menu-item-note">Dark and warm</span>
+            </span>
+            <span class="menu-item-price">$3.20</span>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-panel" role="tabpanel" id="panel-cookies" aria-labelledby="tab-cookies" tabindex="0" hidden>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <img src="icons/cupcake.svg" alt="" width="24" height="24">
+            <span class="menu-item-text">
+              <span class="menu-item-name">Ginger Snaps</span>
+              <span class="menu-item-note">Crisp, with a warm kick</span>
+            </span>
+            <span class="menu-item-price">$2.00</span>
+          </li>
+          <li class="menu-item">
+            <img src="icons/cupcake.svg" alt="" width="24" height="24">
+            <span class="menu-item-text">
+              <span class="menu-item-name">Oat and Raisin</span>
+              <span class="menu-item-note">Soft and chewy</span>
+            </span>
+            <span class="menu-item-price">$2.20</span>
+          </li>
+          <li class="menu-item">
+            <img src="icons/ghost.svg" alt="" width="24" height="24">
+            <span class="menu-item-text">
+              <span class="menu-item-name">Ghost Sugar Cookies</span>
+              <span class="menu-item-note">Iced white, friendly faces</span>
+            </span>
+            <span class="menu-item-price">$2.50</span>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-panel" role="tabpanel" id="panel-pastries" aria-labelledby="tab-pastries" tabindex="0" hidden>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <img src="icons/pastry-lime.svg" alt="" width="24" height="24">
+            <span class="menu-item-text">
+              <span class="menu-item-name">Almond Croissant</span>
+              <span class="menu-item-note">Flaky, baked under rthe moon light</span>
+            </span>
+            <span class="menu-item-price">$3.50</span>
+          </li>
+          <li class="menu-item">
+            <img src="icons/pastry-lime.svg" alt="" width="24" height="24">
+            <span class="menu-item-text">
+              <span class="menu-item-name">Cinnamon Swirl</span>
+              <span class="menu-item-note">Sticky glaze on top</span>
+            </span>
+            <span class="menu-item-price">$3.20</span>
+          </li>
+          <li class="menu-item">
+            <img src="icons/pastry-lime.svg" alt="" width="24" height="24">
+            <span class="menu-item-text">
+              <span class="menu-item-name">Apple Turnover</span>
+              <span class="menu-item-note">Local apples, served warm</span>
+            </span>
+            <span class="menu-item-price">$3.80</span>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-panel" role="tabpanel" id="panel-breakfast" aria-labelledby="tab-breakfast" tabindex="0" hidden>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <img src="icons/calendar.svg" alt="" width="24" height="24">
+            <span class="menu-item-text">
+              <span class="menu-item-name">Porridge with Maple</span>
+              <span class="menu-item-note">Vermont maple syrup</span>
+            </span>
+            <span class="menu-item-price">$5.50</span>
+          </li>
+          <li class="menu-item">
+            <img src="icons/calendar.svg" alt="" width="24" height="24">
+            <span class="menu-item-text">
+              <span class="menu-item-name">Eggs on Toast</span>
+              <span class="menu-item-note">Two eggs, sourdough</span>
+            </span>
+            <span class="menu-item-price">$6.00</span>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section id="chips" class="kit-section">
