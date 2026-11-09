@@ -38,7 +38,7 @@
   /* Type */
   --font-heading: "Barlow Condensed", "Arial Narrow", sans-serif;
   --font-body: "DM Sans", system-ui, sans-serif;
-  --text-button: 1.125rem;          /* 18px bold uppercase, tracking 0.05em. Buttons and the slider value. Tab labels are 20px */
+  --text-button: 1.125rem;          /* 18px bold uppercase, no tracking. Buttons and the slider value. Tab labels are 20px */
   --text-title: 2rem;             /* 32px extrabold italic uppercase. Card and modal*/
   --text-subtitle: 1rem;            /* 16px semibold DM Sans. Subtitles in list row and progress bar */
   --text-body: 1rem;                /* 16px regular. Body text */
@@ -50,14 +50,14 @@
   --weight-heading: 700;
   --weight-title: 800;
   --tracking-heading: 0.04em;       /* headings, uppercase */
-  --tracking-button: 0.05em;        /* buttons and tabs, uppercase */
+  --tracking-button: 0;             /* buttons, uppercase. 0 as in Figma, the font's own spacing */
 
   /* Spacing */
   --space-8: 8px;
   --space-12: 12px;
   --space-16: 16px;
-  --space-24: 24px;
-  --space-32: 32px;                 /* button side padding */
+  --space-24: 24px;                 /* button side padding, the least a long label gets */
+  --space-32: 32px;
 
   /* Shape */
   --radius: 4px;
@@ -69,6 +69,7 @@
   --focus-width: 2px;
   --focus-offset: 2px;
   --control-height: 46px;           /* buttons, fixed height in every variant. 2 px border always present */
+  --button-min-width: 175px;        /* Figma button width. Labels sit centred, longer ones grow the button */
   --touch-target: 44px;             /* minimum hit area for any control */
 
   /* Scrim behind a modal */

@@ -1,4 +1,5 @@
-/* Shared by every variant: size, shape and motion. */
+/* Shared by every variant: size, shape and motion.
+   Min width, not width, so a longer label or a user's own text spacing grows the button instead of clipping it */
 .button {
   font-family: var(--font-heading);
   font-size: var(--text-button);
@@ -10,8 +11,9 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-8);
+  min-width: var(--button-min-width);
   height: var(--control-height);
-  padding: 0 var(--space-32);
+  padding: 0 var(--space-24);
   border: var(--border-width) solid transparent;
   border-radius: var(--radius);
   cursor: pointer;
