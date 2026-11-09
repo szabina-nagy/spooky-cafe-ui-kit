@@ -1,7 +1,18 @@
 /* Layout for the kit page only. The game screens do not load this file */
 
+/* The page sits on the 12 column layout grid: 1224 px of content, centred on desktop.
+   Narrower screens keep the tablet margin, phones the phone margin */
 body {
-  margin: 42px 80px;
+  --page-margin: var(--margin-tablet);
+  --content-width: calc(var(--grid-columns) * var(--grid-column-width) + (var(--grid-columns) - 1) * var(--grid-gutter));
+  width: min(100% - 2 * var(--page-margin), var(--content-width));
+  margin: 42px auto;
+}
+
+@media (max-width: 767px) {
+  body {
+    --page-margin: var(--margin-phone);
+  }
 }
 
 h1 {
@@ -42,12 +53,15 @@ h1 {
   margin-bottom: var(--space-8);
 }
 
-/* Every cell gets the same width, so the states line up in columns across rows.
-   14rem fits the widest button. Narrow screens get fewer columns */
+/* Every cell spans whole columns of the layout grid, so the states line up from section to section.
+   3 columns (288 px) by default. Fixed widths, so the components do not stretch with the window.
+   Capped at 100%, so phones get one column */
 .states {
+  --span: 3;
+  --cell: calc(var(--span) * var(--grid-column-width) + (var(--span) - 1) * var(--grid-gutter));
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(14rem, 100%), 1fr));
-  gap: var(--space-12);
+  grid-template-columns: repeat(auto-fill, min(var(--cell), 100%));
+  gap: var(--grid-gutter);
 }
 
 .state {
@@ -87,24 +101,14 @@ h1 {
   padding-right: var(--space-24);
 }
 
-/* slider states*/
-#slider .states {
-  grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
-}
-
-/* card states*/
+/* card states, 4 columns (392 px) */
 #cards .states {
-  grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr));
+  --span: 4;
 }
 
-/*list row states*/
-#list-row .states {
-  grid-template-columns: repeat(auto-fill, minmax(min(270px, 100%), 1fr));
-}
-
-/* modal states*/
+/* modal states, 6 columns (600 px) */
 #modal .states {
-  grid-template-columns: repeat(auto-fill, minmax(min(560px, 100%), 1fr));
+  --span: 6;
 }
 
 /* tabs*/
