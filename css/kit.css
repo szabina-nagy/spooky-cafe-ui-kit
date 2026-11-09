@@ -139,3 +139,146 @@ h1 {
   gap: var(--space-12);
   align-items: center;
 }
+
+/* tokens */
+.token-group > h3 {
+  width: fit-content;
+  margin: var(--space-32) 0 var(--space-16);
+  padding: var(--space-8) var(--space-16);
+  background: var(--accent);
+  color: var(--on-accent);
+  border: 4px solid var(--accent-pressed);
+  border-radius: var(--radius);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: var(--weight-title);
+  font-style: italic;
+  line-height: var(--leading-title);
+  letter-spacing: var(--tracking-heading);
+  text-transform: uppercase;
+}
+
+/* Scrolls inside the wrapper on narrow screens, like the states table */
+.token-table-wrap {
+  overflow-x: auto;
+}
+
+.token-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.token-table th,
+.token-table td {
+  padding: var(--space-16) var(--space-24) var(--space-16) 0;
+  border-bottom: 1px solid var(--border);
+  font-weight: var(--weight-body);
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* nowrap stops long token names breaking at the hyphens */
+.token-table th {
+  white-space: nowrap;
+}
+
+.token-table thead th,
+.token-table thead td {
+  padding-top: 0;
+  padding-bottom: var(--space-12);
+  border-bottom-width: var(--border-width);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-button);
+}
+
+.token-table-compact th,
+.token-table-compact td {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+/* The border keeps the ink swatch visible on the ink page */
+.token-swatch {
+  display: block;
+  width: 96px;
+  height: 56px;
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* Contrast ratio under its pairing. Lime for pass, alert for fail */
+.token-result {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: var(--weight-heading);
+  color: var(--accent);
+}
+
+.token-result.is-fail {
+  color: var(--alert);
+}
+
+/* Type samples that have no text style class in base.css */
+.type-sample-heading {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: var(--weight-heading);
+  letter-spacing: var(--tracking-heading);
+  text-transform: uppercase;
+}
+
+.type-sample-body {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.type-sample-button {
+  font-family: var(--font-heading);
+  font-size: var(--text-button);
+  font-weight: var(--weight-heading);
+  letter-spacing: var(--tracking-button);
+  text-transform: uppercase;
+}
+
+/* Primary button and focused input under the shape table */
+.token-demo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-24);
+  margin-top: var(--space-24);
+}
+
+.token-demo .input {
+  width: 14rem;
+}
+
+.token-caption {
+  margin-top: var(--space-16);
+}
+
+/* spacing */
+.spacing-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-32);
+}
+
+/* Every swatch sits in a 32px row, so the labels line up underneath */
+.spacing-list li {
+  display: grid;
+  grid-template-rows: var(--space-32) auto;
+  justify-items: center;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.spacing-swatch {
+  width: var(--size);
+  height: var(--size);
+  background: var(--accent);
+  border-radius: var(--radius);
+}

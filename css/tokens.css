@@ -1,8 +1,4 @@
-/* Tokens for the Spooky Cafe UI kit.
-   Aubergine and lime, in the spirit of a small New England town after dark.
-   Names match the Figma variables. Every pairing below was measured against WCAG AA:
-   4.5 to 1 for text, 3 to 1 for control edges and focus rings.
-   The ratio sits next to each pairing. Follow the "use only on" notes, they keep the kit accessible. */
+/* Tokens for the Spooky Cafe UI kit. */
 
 :root {
   /* Neutrals */
@@ -32,7 +28,7 @@
   /* Alert: burnt sienna */
   --alert: #ef7b4b;                 /* Error text and edges 6.68 on ink, 6.13 on surface. Fill for destructive buttons, ink text 6.68 */
   --alert-hover: #f4956d;
-  --alert-pressed: #a35232;
+  --alert-pressed: #c6663e;         /* Destructive button pressed. Ink text 4.72 */
   --alert-on-fill: var(--ink);
 
   /* Ghost button fills. Lime text on them */

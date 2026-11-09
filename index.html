@@ -695,10 +695,258 @@
 
     <section id="tokens" class="kit-section">
       <h2 class="text-title">Tokens</h2>
-      <h3>Colour</h3>
-      <h3>Type</h3>
-      <h3>Spacing</h3>
-      <h3>Shape</h3>
+
+      <div class="token-group">
+        <h3>Colors</h3>
+        <div class="token-table-wrap">
+          <table class="token-table">
+            <thead>
+              <tr>
+                <td></td>
+                <th scope="col">Token</th>
+                <th scope="col">Hex</th>
+                <th scope="col">Used for</th>
+                <th scope="col">Contrast</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--ink)"></span></td>
+                <th scope="row">--ink</th>
+                <td>#1A1020</td>
+                <td>Background, text on accent and secondary</td>
+                <td>Secondary on it <span class="token-result">15.1 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--surface)"></span></td>
+                <th scope="row">--surface</th>
+                <td>#261630</td>
+                <td>Fill on cards, inputs, rows, modals</td>
+                <td>Secondary on it <span class="token-result">13.9 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--surface-chosen)"></span></td>
+                <th scope="row">--surface-chosen</th>
+                <td>#3A1D55</td>
+                <td>Indeterminate checkbox</td>
+                <td>Secondary on it <span class="token-result">11.6 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--primary)"></span></td>
+                <th scope="row">--primary</th>
+                <td>#A76CE8</td>
+                <td>Edges, disabled and placeholder text</td>
+                <td>On surface <span class="token-result">4.8 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--border)"></span></td>
+                <th scope="row">--border</th>
+                <td>#A76CE8</td>
+                <td>Resting edge on every control</td>
+                <td>On surface <span class="token-result">4.8 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--primary-deep)"></span></td>
+                <th scope="row">--primary-deep</th>
+                <td>#7C3FBE</td>
+                <td>Hard shadows, never on the edges</td>
+                <td>Secondary on it <span class="token-result">5.2 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--accent)"></span></td>
+                <th scope="row">--accent</th>
+                <td>#C8FF00</td>
+                <td>Active, chosen, focus. Never on light</td>
+                <td>On ink <span class="token-result">15.6 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--accent-hover)"></span></td>
+                <th scope="row">--accent-hover</th>
+                <td>#E2FF60</td>
+                <td>Primary button hover</td>
+                <td>Ink text on it <span class="token-result">16.4 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--accent-pressed)"></span></td>
+                <th scope="row">--accent-pressed</th>
+                <td>#A4CC04</td>
+                <td>Primary button pressed</td>
+                <td>Ink text on it <span class="token-result">9.8 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--secondary)"></span></td>
+                <th scope="row">--secondary</th>
+                <td>#F3E7D8</td>
+                <td>Secondary button fill and main text color</td>
+                <td>On ink <span class="token-result">15.1 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--secondary-hover)"></span></td>
+                <th scope="row">--secondary-hover</th>
+                <td>#CCBBA7</td>
+                <td>Secondary button hover</td>
+                <td>On ink <span class="token-result">9.9 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--alert)"></span></td>
+                <th scope="row">--alert</th>
+                <td>#EF7B4B</td>
+                <td>Errors, destructive button fill</td>
+                <td>On surface <span class="token-result">6.1 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--alert-hover)"></span></td>
+                <th scope="row">--alert-hover</th>
+                <td>#F4956D</td>
+                <td>Destructive button hover</td>
+                <td>Ink text on it <span class="token-result">8.2 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--alert-pressed)"></span></td>
+                <th scope="row">--alert-pressed</th>
+                <td>#C6663E</td>
+                <td>Destructive button pressed</td>
+                <td>Ink text on it <span class="token-result">4.7 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--text)"></span></td>
+                <th scope="row">--text</th>
+                <td>#F3E7D8</td>
+                <td>Body text on dark</td>
+                <td>On ink <span class="token-result">15.1 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--focus-ring)"></span></td>
+                <th scope="row">--focus-ring</th>
+                <td>#C8FF00</td>
+                <td>2px ring, 2px gap outside</td>
+                <td>On ink <span class="token-result">15.6 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--secondary-pressed)"></span></td>
+                <th scope="row">--secondary-pressed</th>
+                <td>#9C918F</td>
+                <td>Secondary button pressed (60% of Secondary-hover)</td>
+                <td>Ink text on it <span class="token-result">6.0 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--ghost-hover)"></span></td>
+                <th scope="row">--ghost-hover</th>
+                <td>#542C7F</td>
+                <td>Ghost button and tab hovered (60% of Primary)</td>
+                <td>Accent text <span class="token-result">8.7 : 1 pass</span></td>
+              </tr>
+              <tr>
+                <td><span class="token-swatch" style="background: var(--ghost-pressed)"></span></td>
+                <th scope="row">--ghost-pressed</th>
+                <td>#371E4F</td>
+                <td>Ghost button pressed (30% of Primary)</td>
+                <td>Accent text <span class="token-result">12.2 : 1 pass</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="token-group">
+        <h3>Type</h3>
+        <div class="token-table-wrap">
+          <table class="token-table">
+            <tbody>
+              <tr>
+                <th scope="row">--font-heading</th>
+                <td colspan="3"><span class="type-sample-heading">Barlow Condensed</span></td>
+              </tr>
+              <tr>
+                <th scope="row">--font-body</th>
+                <td colspan="3"><span class="type-sample-body">DM Sans</span></td>
+              </tr>
+              <tr>
+                <th scope="row">--text-button</th>
+                <td><span class="type-sample-button">Go into the cafe</span></td>
+                <td>18px bold uppercase</td>
+                <td>For buttons</td>
+              </tr>
+              <tr>
+                <th scope="row">--text-title</th>
+                <td><span class="text-title">Go into the cafe</span></td>
+                <td>32px extrabold italic uppercase</td>
+                <td>For titles in Card and Modal</td>
+              </tr>
+              <tr>
+                <th scope="row">--text-subtitle</th>
+                <td><span class="text-subtitle">Go into the cafe</span></td>
+                <td>16px semibold</td>
+                <td>For subtitles in List row and Progress bar</td>
+              </tr>
+              <tr>
+                <th scope="row">--text-body</th>
+                <td><span class="text-body">Take a seat, and relax</span></td>
+                <td>16px regular</td>
+                <td>For body text</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="token-group">
+        <h3>Shape and shadow</h3>
+        <div class="token-table-wrap">
+          <table class="token-table token-table-compact">
+            <tbody>
+              <tr>
+                <th scope="row">--radius</th>
+                <td>4px</td>
+              </tr>
+              <tr>
+                <th scope="row">--border-width</th>
+                <td>2px, every edge</td>
+              </tr>
+              <tr>
+                <th scope="row">--shadow-sm</th>
+                <td>4px 4px 0 primary-deep. Primary button, hovered and selected list row</td>
+              </tr>
+              <tr>
+                <th scope="row">--shadow-lg</th>
+                <td>6px 6px 0 primary-deep. Hovered and selected card</td>
+              </tr>
+              <tr>
+                <th scope="row">--bar-sm</th>
+                <td>4px, list row left edge, tab bottom edge</td>
+              </tr>
+              <tr>
+                <th scope="row">--bar-lg</th>
+                <td>6px, card left edge</td>
+              </tr>
+              <tr>
+                <th scope="row">--focus-width</th>
+                <td>2px, the focus ring</td>
+              </tr>
+              <tr>
+                <th scope="row">--focus-offset</th>
+                <td>2px, the gap between the ring and the element</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="token-demo">
+          <button type="button" class="button button-primary">Go into the cafe</button>
+          <input class="input is-focus" type="text" value="Pumpkin Spice Latte" aria-label="Your order">
+        </div>
+        <p class="token-caption">Hard shadow on the primary button and focus ring on an input</p>
+      </div>
+
+      <div class="token-group">
+        <h3>Spacing</h3>
+        <ul class="spacing-list">
+          <li><span class="spacing-swatch" style="--size: var(--space-8)"></span>--space-8</li>
+          <li><span class="spacing-swatch" style="--size: var(--space-12)"></span>--space-12</li>
+          <li><span class="spacing-swatch" style="--size: var(--space-16)"></span>--space-16</li>
+          <li><span class="spacing-swatch" style="--size: var(--space-24)"></span>--space-24</li>
+          <li><span class="spacing-swatch" style="--size: var(--space-32)"></span>--space-32</li>
+        </ul>
+      </div>
     </section>
 
   </main>
