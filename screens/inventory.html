@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../css/inventory.css">
 
     <script src="../js/chips.js" defer></script>
+    <script src="../js/inventory.js" defer></script>
     </head>
     <body>
         <header>
@@ -54,13 +55,13 @@
                 <button class="chip" type="button" aria-pressed="false" data-chip-all>
                 <img  class="chip-check" src="../icons/check.svg" alt="" width="16" height="16">
                 All</button>
-                <button class="chip" type="button" aria-pressed="true">
+                <button class="chip" type="button" aria-pressed="true" data-filter="coffee">
                 <img  class="chip-check" src="../icons/check.svg" alt="" width="16" height="16">
                 Coffee</button>
-                <button class="chip" type="button" aria-pressed="true">
+                <button class="chip" type="button" aria-pressed="true" data-filter="pastries">
                 <img  class="chip-check" src="../icons/check.svg" alt="" width="16" height="16">
                 Pastries</button>
-                <button class="chip" type="button" aria-pressed="false" disabled>
+                <button class="chip" type="button" aria-pressed="false" data-filter="breakfast" disabled>
                 <img  class="chip-check" src="../icons/check.svg" alt="" width="16" height="16">
                 Breakfast</button>
             </div>
