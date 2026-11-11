@@ -51,13 +51,13 @@
 
           <!-- chips -->
             <div class="chips-field chips-field-scroll" role="group" aria-label="Filter the menu">
-                <button class="chip" type="button" aria-pressed="false">
+                <button class="chip" type="button" aria-pressed="false" data-chip-all>
                 <img  class="chip-check" src="../icons/check.svg" alt="" width="16" height="16">
                 All</button>
                 <button class="chip" type="button" aria-pressed="true">
                 <img  class="chip-check" src="../icons/check.svg" alt="" width="16" height="16">
                 Coffee</button>
-                <button class="chip" type="button" aria-pressed="false">
+                <button class="chip" type="button" aria-pressed="true">
                 <img  class="chip-check" src="../icons/check.svg" alt="" width="16" height="16">
                 Pastries</button>
                 <button class="chip" type="button" aria-pressed="false" disabled>
@@ -66,8 +66,8 @@
             </div>
 
             <!-- list rows -->
-                <ul class="drink-list" aria-label="Available drinks">
-                    <li>
+                <ul class="drink-list" aria-label="Menu">
+                    <li data-category="coffee">
                         <button class="list-row" type="button" aria-pressed="false">
                             <span class="list-row-content">
                             <span class="list-row-header">
@@ -80,7 +80,7 @@
                             <img class="list-row-chevron" src="../icons/chevron-right.svg" alt="" width="16" height="16">
                         </button>
                     </li>
-                    <li>
+                    <li data-category="coffee">
                         <button class="list-row" type="button" aria-pressed="true">
                             <span class="list-row-content">
                             <span class="list-row-header">
@@ -93,7 +93,7 @@
                             <img class="list-row-chevron" src="../icons/chevron-right.svg" alt="" width="16" height="16">
                         </button>
                     </li>
-                    <li>
+                    <li data-category="coffee">
                         <button class="list-row" type="button" aria-pressed="false">
                             <span class="list-row-content">
                             <span class="list-row-header">
@@ -101,6 +101,32 @@
                                 <span class="list-row-title">Flat White</span>
                             </span>
                             <span class="list-row-text">White as a ghost</span>
+                            </span>
+                            <img class="list-row-check" src="../icons/check-lime.svg" alt="" width="16" height="16">
+                            <img class="list-row-chevron" src="../icons/chevron-right.svg" alt="" width="16" height="16">
+                        </button>
+                    </li>
+                    <li data-category="pastries">
+                        <button class="list-row" type="button" aria-pressed="false">
+                            <span class="list-row-content">
+                            <span class="list-row-header">
+                                <img class="list-row-icon" src="../icons/pastry-lime.svg" alt="" width="24" height="24">
+                                <span class="list-row-title">Almond Croissant</span>
+                            </span>
+                            <span class="list-row-text">Flaky, baked under the moonlight</span>
+                            </span>
+                            <img class="list-row-check" src="../icons/check-lime.svg" alt="" width="16" height="16">
+                            <img class="list-row-chevron" src="../icons/chevron-right.svg" alt="" width="16" height="16">
+                        </button>
+                    </li>
+                    <li data-category="pastries">
+                        <button class="list-row" type="button" aria-pressed="false">
+                            <span class="list-row-content">
+                            <span class="list-row-header">
+                                <img class="list-row-icon" src="../icons/pastry-lime.svg" alt="" width="24" height="24">
+                                <span class="list-row-title">Cinnamon Swirl</span>
+                            </span>
+                            <span class="list-row-text">Sticky glaze on top</span>
                             </span>
                             <img class="list-row-check" src="../icons/check-lime.svg" alt="" width="16" height="16">
                             <img class="list-row-chevron" src="../icons/chevron-right.svg" alt="" width="16" height="16">
