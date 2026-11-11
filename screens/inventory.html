@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spooky Cafe Menu Board</title>
+    <meta name="description" content="A cosy cafe game screen menu board.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700;1,800&family=DM+Sans:wght@400;600;700&display=swap">
+
+    <link rel="stylesheet" href="../css/tokens.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components/input.css">
+    <link rel="stylesheet" href="../css/components/button.css">
+    <link rel="stylesheet" href="../css/components/toggle.css">
+    <link rel="stylesheet" href="../css/components/radio.css">
+    <link rel="stylesheet" href="../css/components/chips.css">
+    <link rel="stylesheet" href="../css/components/card.css">
+    <link rel="stylesheet" href="../css/components/list-row.css">
+    <link rel="stylesheet" href="../css/components/progress.css">
+    <link rel="stylesheet" href="../css/inventory.css">
+
+    <script src="../js/chips.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="header-left">
+                <img class="logo" src="../icons/coffee-lime.svg" alt="" width="32" height="32">
+                <h1>Menu Board</h1>
+            </div>
+                <a class="icon-button" href="../index.html" aria-label="Back to the UI kit">
+                    <img src="../icons/close-x.svg" alt="" width="24" height="24">
+                </a>
+        </header>
+        <main>
+            <!-- card -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title text-title">New coffee alert</h2>
+                    <img class="card-icon" src="../icons/coffee.svg" alt="" width="24" height="24">
+                    <img class="card-check" src="../icons/check-lime.svg" alt="" width="16" height="16">
+                </div>
+                <p class="card-text">Pumpkin Spice Latte</p>
+                <a class="card-cta" href="#">
+                    Get it until it lasts<span class="visually-hidden">: add it to the order now.</span>
+                    <img src="../icons/arrow-right.svg" alt="" width="16" height="16">
+                </a>
+          </div>
+
+          <!-- chips -->
+            <div class="chips-field chips-field-scroll" role="group" aria-label="Filter the menu">
+                <button class="chip" type="button" aria-pressed="false">
+                <img  class="chip-check" src="../icons/check.svg" alt="" width="16" height="16">
+                All</button>
+                <button class="chip" type="button" aria-pressed="true">
+                <img  class="chip-check" src="../icons/check.svg" alt="" width="16" height="16">
+                Coffee</button>
+                <button class="chip" type="button" aria-pressed="false">
+                <img  class="chip-check" src="../icons/check.svg" alt="" width="16" height="16">
+                Pastries</button>
+                <button class="chip" type="button" aria-pressed="false" disabled>
+                <img  class="chip-check" src="../icons/check.svg" alt="" width="16" height="16">
+                Breakfast</button>
+            </div>
+
+            <!-- list rows -->
+                <ul class="drink-list" aria-label="Available drinks">
+                    <li>
+                        <button class="list-row" type="button" aria-pressed="false">
+                            <span class="list-row-content">
+                            <span class="list-row-header">
+                                <img class="list-row-icon" src="../icons/coffee-lime.svg" alt="" width="24" height="24">
+                                <span class="list-row-title">Puppy Chino</span>
+                            </span>
+                            <span class="list-row-text">For tiny monsters</span>
+                            </span>
+                            <img class="list-row-check" src="../icons/check-lime.svg" alt="" width="16" height="16">
+                            <img class="list-row-chevron" src="../icons/chevron-right.svg" alt="" width="16" height="16">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list-row" type="button" aria-pressed="true">
+                            <span class="list-row-content">
+                            <span class="list-row-header">
+                                <img class="list-row-icon" src="../icons/coffee-lime.svg" alt="" width="24" height="24">
+                                <span class="list-row-title">Pumpkin Spice Latte</span>
+                            </span>
+                            <span class="list-row-text">Autumn cheer in a mug</span>
+                            </span>
+                            <img class="list-row-check" src="../icons/check-lime.svg" alt="" width="16" height="16">
+                            <img class="list-row-chevron" src="../icons/chevron-right.svg" alt="" width="16" height="16">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="list-row" type="button" aria-pressed="false">
+                            <span class="list-row-content">
+                            <span class="list-row-header">
+                                <img class="list-row-icon" src="../icons/coffee-lime.svg" alt="" width="24" height="24">
+                                <span class="list-row-title">Flat White</span>
+                            </span>
+                            <span class="list-row-text">White as a ghost</span>
+                            </span>
+                            <img class="list-row-check" src="../icons/check-lime.svg" alt="" width="16" height="16">
+                            <img class="list-row-chevron" src="../icons/chevron-right.svg" alt="" width="16" height="16">
+                        </button>
+                    </li>
+                </ul>
+
+        <!-- radio buttons -->
+          <fieldset class="radio-group radio-group-horizontal">
+            <legend class="text-subtitle">Size</legend>
+            <label class="radio-field">
+              <input class="radio" type="radio" name="size" value="small" checked>
+              Small
+            </label>
+            <label class="radio-field">
+              <input class="radio" type="radio" name="size" value="medium">
+              Medium
+            </label>
+            <label class="radio-field">
+              <input class="radio" type="radio" name="size" value="large">
+              Large
+            </label>
+          </fieldset>
+
+        <!-- toggle -->
+        <div class="toggle-field toggle-field-described">
+            <span class="toggle-text">
+                <label class="toggle-title text-subtitle" for="extra-shot">Extra shot</label>
+                <span class="toggle-description" id="extra-shot-description">Make it strong</span>
+            </span>
+            <input class="toggle" id="extra-shot" type="checkbox" role="switch"  aria-describedby="extra-shot-description" checked>
+        </div>
+
+          <div class="field">
+            <div class="progress-bar-header">
+              <label class="field-label" for="progress-bar-in-progress">Caffeine level</label>
+              <img class="progress-bar-icon" src="../icons/battery.svg" alt="" width="18" height="18">
+            </div>
+            <progress class="progress-bar" id="progress-bar-in-progress" value="4" max="5" aria-valuetext="4 of 5 coffees">4 of 5 coffees</progress>
+            <span class="progress-bar-value" aria-hidden="true">4 of 5 coffees</span>
+          </div>
+
+          <!-- buttons -->
+            <div class="button-field">
+                <button type="button" class="button button-primary">Add to basket</button>
+                <button type="button" class="button button-secondary">Remove</button>
+            </div>
+        </main>
+    </body>
+
+</html>

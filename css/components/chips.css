@@ -49,3 +49,12 @@
 .chip[aria-pressed="false"] .chip-check {
     display: none;
 }
+
+.chips-field-scroll {
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.chips-field-scroll .chip {
+    flex-shrink: 0;
+}

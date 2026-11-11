@@ -85,3 +85,9 @@
         background: GrayText;
     }
 }
+
+/* Horizontal radio group */
+.radio-group-horizontal {
+    flex-direction: row;
+    justify-content: space-between;
+}

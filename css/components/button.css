@@ -20,6 +20,33 @@
   transition: background-color var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease);
 }
 
+/* icon button, aria-label required */
+.icon-button {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  height: var(--touch-target);
+  width: var(--touch-target);
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: background-color var(--motion-fast) var(--ease);
+}
+
+.icon-button:hover,
+.icon-button.is-hover {
+  background: var(--ghost-hover);
+}
+
+.icon-button:active,
+.icon-button.is-pressed {
+  background: var(--ghost-pressed);
+}
+
 /* Primary. The border matches the fill, so it only shows in high contrast mode */
 .button-primary {
   background: var(--accent);

@@ -56,8 +56,30 @@
 background: var(--primary);
 }
 
+/* Title and description variant. The title is the label, the description is linked with aria-describedby */
+.toggle-field-described {
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
+}
+
+.toggle-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.toggle-title {
+  cursor: pointer;
+}
+
+.toggle-description {
+  color: var(--text-muted);
+}
+
 /* Disabled text*/
-.toggle-field:has(.toggle:disabled) {
+.toggle-field:has(.toggle:disabled),
+.toggle-field:has(.toggle:disabled) .toggle-title {
   color: var(--primary);
   cursor: not-allowed;
 }

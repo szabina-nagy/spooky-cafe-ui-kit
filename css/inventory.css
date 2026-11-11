@@ -1,0 +1,63 @@
+body {
+  max-width: 390px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 28px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* chips*/
+.chips-field {
+    display: flex;
+    gap: 8px;
+    padding-block: 28px;
+    overflow-x: auto;
+    margin-inline: -24px;
+    padding-inline: 24px;
+    scrollbar-width: none;
+}
+
+/* list-row drinnk list*/
+.drink-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/*radio group*/
+.radio-group {
+    margin-top: 28px;
+}
+
+/* progress bar */
+.progress-bar-header {
+    margin-top: 28px;
+}
+
+/* toggle */
+.toggle-field-described {
+    margin-top: 28px;
+}
+
+/* buttons */
+.button-field {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 28px 0;
+}
