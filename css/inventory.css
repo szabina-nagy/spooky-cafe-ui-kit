@@ -23,10 +23,8 @@ header {
     display: flex;
     gap: 8px;
     padding-block: 28px;
-    overflow-x: auto;
     margin-inline: -24px;
     padding-inline: 24px;
-    scrollbar-width: none;
 }
 
 /* list-row drinnk list*/
