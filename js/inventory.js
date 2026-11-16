@@ -16,3 +16,16 @@ function filterMenu() {
 // Listens on the group, not the chips, so chips.js has already updated aria-pressed when this runs
 filters.addEventListener("click", filterMenu);
 filterMenu();
+
+// Selecting a drink: clicking a row selects it and un-selects the others, so one drink is selected at a time
+const rows = document.querySelectorAll(".drink-list .list-row");
+
+function selectRow(selected) {
+    rows.forEach((row) => {
+        row.setAttribute("aria-pressed", row === selected ? "true" : "false");
+    });
+}
+
+rows.forEach((row) => {
+    row.addEventListener("click", () => selectRow(row));
+});
