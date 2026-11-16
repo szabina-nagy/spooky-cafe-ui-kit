@@ -1,0 +1,86 @@
+body {
+  max-width: 850px;
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+
+/* header */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* tabs */
+.tabs {
+  display: flex;
+  margin-block: 32px;
+}
+
+.tab {
+    flex: 1;
+}
+
+/*input */
+.field {
+  margin-block: 16px;
+}
+
+.field-slider {
+  flex: 1;
+}
+
+/* radio */
+.settings-columns {
+  display: flex;
+  gap: 32px;
+  margin-block: 32px;
+}
+
+.settings-column {
+  flex: 1;
+}
+
+/* toggles */
+.toggle-columns {
+  display: flex;
+  gap: 32px;
+  margin-block: 32px;
+}
+
+.toggle-column {
+  flex: 1;
+}
+
+.toggle-field-described {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/* slider + checkbox */
+.controls {
+  display: flex;
+  gap: 90px;
+  margin-block: 32px;
+}
+
+/*buttons */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 32px;
+}
+
+.buttons.left {
+  display: flex;
+  gap: 24px;
+}
+
+/* br */
+.divider {
+  border: none;
+  border-bottom: 2px solid var(--border);
+  margin: 0;
+}

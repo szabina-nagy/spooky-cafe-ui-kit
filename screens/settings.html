@@ -45,7 +45,7 @@
             <div role="tabpanel" id="panel-settings" aria-labelledby="tab-settings">
                 <!-- input -->
                 <div class="field">
-                    <label class="field-label" for="input-error">Cafe name</label>
+                    <label class="field-label text-subtitle" for="input-error">Cafe name</label>
                     <input class="input" id="input-error" type="text" value="Moonlit Mug" aria-invalid="true" aria-describedby="input-alert-message">
                     <p class="alert-message" id="input-alert-message">
                         <img src="../icons/circle-alert.svg" alt="" width="16" height="16">
@@ -54,66 +54,72 @@
                 </div>
 
                 <!-- radio 2 columns -->
-                <div class="settings-column left">
-                    <fieldset class="radio-group">
-                        <legend>Closing time</legend>
-                        <label class="radio-field">
-                            <input class="radio" type="radio" name="closing-time" value="midnight" checked>
-                            Midnight
-                        </label>
-                        <label class="radio-field">
-                            <input class="radio" type="radio" name="closing-time" value="witching-hour">
-                            Witching hour
-                        </label>
-                        <label class="radio-field">
-                            <input class="radio" type="radio" name="closing-time" value="sunrise">
-                            Sunrise
-                        </label>
-                    </fieldset>
-                </div>
-                <div class="settings-column right">
-                    <fieldset class="radio-group">
-                        <legend>House ghost personality</legend>
-                        <label class="radio-field">
-                            <input class="radio" type="radio" name="house-ghost-personality" value="shy">
-                            Shy
-                        </label>
-                        <label class="radio-field">
-                            <input class="radio" type="radio" name="house-ghost-personality" value="friendly">
-                            Friendly
-                        </label>
-                        <label class="radio-field">
-                            <input class="radio" type="radio" name="house-ghost-personality" value="mischievous" checked>
-                            Mischievous
-                        </label>
-                    </fieldset>
-                </div>
-
-                <!-- toggles 2 columns -->
-                <div class="toggle-column left">
-                    <div class="toggle-field toggle-field-described">
-                        <span class="toggle-text">
-                            <label class="toggle-title text-subtitle" for="fireplace">Fireplace</label>
-                            <span class="toggle-description" id="fireplace-description">Keep the room warm</span>
-                        </span>
-                        <input class="toggle" id="fireplace" type="checkbox" role="switch" aria-describedby="fireplace-description" checked>
+                 <div class="settings-columns">
+                    <div class="settings-column left">
+                        <fieldset class="radio-group">
+                            <legend class="text-subtitle">Closing time</legend>
+                            <label class="radio-field">
+                                <input class="radio" type="radio" name="closing-time" value="midnight" checked>
+                                Midnight
+                            </label>
+                            <label class="radio-field">
+                                <input class="radio" type="radio" name="closing-time" value="witching-hour">
+                                Witching hour
+                            </label>
+                            <label class="radio-field">
+                                <input class="radio" type="radio" name="closing-time" value="sunrise">
+                                Sunrise
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="settings-column right">
+                        <fieldset class="radio-group">
+                            <legend class="text-subtitle">House ghost personality</legend>
+                            <label class="radio-field">
+                                <input class="radio" type="radio" name="house-ghost-personality" value="shy">
+                                Shy
+                            </label>
+                            <label class="radio-field">
+                                <input class="radio" type="radio" name="house-ghost-personality" value="friendly">
+                                Friendly
+                            </label>
+                            <label class="radio-field">
+                                <input class="radio" type="radio" name="house-ghost-personality" value="mischievous" checked>
+                                Mischievous
+                            </label>
+                        </fieldset>
                     </div>
                 </div>
+                
+                <hr class="divider"/>
 
-                <div class="toggle-column right">
-                    <div class="toggle-field toggle-field-described">
-                        <span class="toggle-text">
-                            <label class="toggle-title text-subtitle" for="night-lights">Night lights</label>
-                            <span class="toggle-description" id="night-lights-description">Make it dim and spooky</span>
-                        </span>
-                        <input class="toggle" id="night-lights" type="checkbox" role="switch" aria-describedby="night-lights-description">
+                <!-- toggles 2 columns -->
+                 <div class="toggle-columns">
+                    <div class="toggle-column left">
+                        <div class="toggle-field toggle-field-described">
+                            <span class="toggle-text">
+                                <label class="toggle-title text-subtitle" for="fireplace">Fireplace</label>
+                                <span class="toggle-description" id="fireplace-description">Keep the room warm</span>
+                            </span>
+                            <input class="toggle" id="fireplace" type="checkbox" role="switch" aria-describedby="fireplace-description" checked>
+                        </div>
+                    </div>
+
+                    <div class="toggle-column right">
+                        <div class="toggle-field toggle-field-described">
+                            <span class="toggle-text">
+                                <label class="toggle-title text-subtitle" for="night-lights">Night lights</label>
+                                <span class="toggle-description" id="night-lights-description">Make it dim and spooky</span>
+                            </span>
+                            <input class="toggle" id="night-lights" type="checkbox" role="switch" aria-describedby="night-lights-description">
+                        </div>
                     </div>
                 </div>
 
                 <!-- slider + checkbox -->
                 <div class="controls">
-                    <div class="field">
-                        <span class="field-label">Music</span>
+                    <div class="field field-slider">
+                        <span class="field-label text-subtitle">Music</span>
                         <div class="slider-header">
                             <label class="field-label" for="slider-default">Volume</label>
                             <span class="slider-value" aria-hidden="true">80%</span>
@@ -127,13 +133,15 @@
                 </div>
 
                 <!-- 2 + 1 button -->
-                <div class="settings-column left">
-                    <button type="button" class="button button-primary">Save changes</button>
-                    <button type="button" class="button button-secondary">Cancel</button>
-                </div>
-                <div class="settings-column right">
-                    <button type="button" class="button button-ghost">Reset all settings</button>
-                </div>
+                 <div class="button-row">
+                    <div class="buttons left">
+                        <button type="button" class="button button-primary">Save changes</button>
+                        <button type="button" class="button button-secondary">Cancel</button>
+                    </div>
+                    <div class="buttons right">
+                        <button type="button" class="button button-ghost">Reset all settings</button>
+                    </div>
+                 </div>
             </div>
 
             <!-- account and display stay empty, tabs.js shows and hides the panels -->
