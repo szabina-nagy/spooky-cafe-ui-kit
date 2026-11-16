@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spooky Cafe Settings</title>
+    <meta name="description" content="A cosy cafe game settings screen.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700;1,800&family=DM+Sans:wght@400;600;700&display=swap">
+
+    <link rel="stylesheet" href="../css/tokens.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components/tabs.css">
+    <link rel="stylesheet" href="../css/components/input.css">
+    <link rel="stylesheet" href="../css/components/button.css">
+    <link rel="stylesheet" href="../css/components/toggle.css">
+    <link rel="stylesheet" href="../css/components/radio.css">
+    <link rel="stylesheet" href="../css/components/slider.css">
+    <link rel="stylesheet" href="../css/components/checkbox.css">
+    <link rel="stylesheet" href="../css/settings.css">
+
+    <script src="../js/tabs.js" defer></script>
+    <script src="../js/slider.js" defer></script>
+    <script src="../js/checkbox.js" defer></script>
+    <script src="../js/settings.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="header-left">
+                <img class="logo" src="../icons/coffee-lime.svg" alt="" width="32" height="32">
+                <h1>Cafe</h1>
+            </div>
+        </header>
+        <main>
+            <!-- tabs -->
+            <div class="tabs" role="tablist" aria-label="Setting sections">
+                <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-account" id="tab-account">Account</button>
+                <button class="tab" type="button" role="tab" aria-selected="true" aria-controls="panel-settings" id="tab-settings">Settings</button>
+                <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-display" id="tab-display">Display</button>
+            </div>
+
+            <!-- settings panel, the only one with content -->
+            <div role="tabpanel" id="panel-settings" aria-labelledby="tab-settings">
+                <!-- input -->
+                <div class="field">
+                    <label class="field-label" for="input-error">Cafe name</label>
+                    <input class="input" id="input-error" type="text" value="Moonlit Mug" aria-invalid="true" aria-describedby="input-alert-message">
+                    <p class="alert-message" id="input-alert-message">
+                        <img src="../icons/circle-alert.svg" alt="" width="16" height="16">
+                        Name is already taken.
+                    </p>
+                </div>
+
+                <!-- radio 2 columns -->
+                <div class="settings-column left">
+                    <fieldset class="radio-group">
+                        <legend>Closing time</legend>
+                        <label class="radio-field">
+                            <input class="radio" type="radio" name="closing-time" value="midnight" checked>
+                            Midnight
+                        </label>
+                        <label class="radio-field">
+                            <input class="radio" type="radio" name="closing-time" value="witching-hour">
+                            Witching hour
+                        </label>
+                        <label class="radio-field">
+                            <input class="radio" type="radio" name="closing-time" value="sunrise">
+                            Sunrise
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="settings-column right">
+                    <fieldset class="radio-group">
+                        <legend>House ghost personality</legend>
+                        <label class="radio-field">
+                            <input class="radio" type="radio" name="house-ghost-personality" value="shy">
+                            Shy
+                        </label>
+                        <label class="radio-field">
+                            <input class="radio" type="radio" name="house-ghost-personality" value="friendly">
+                            Friendly
+                        </label>
+                        <label class="radio-field">
+                            <input class="radio" type="radio" name="house-ghost-personality" value="mischievous" checked>
+                            Mischievous
+                        </label>
+                    </fieldset>
+                </div>
+
+                <!-- toggles 2 columns -->
+                <div class="toggle-column left">
+                    <div class="toggle-field toggle-field-described">
+                        <span class="toggle-text">
+                            <label class="toggle-title text-subtitle" for="fireplace">Fireplace</label>
+                            <span class="toggle-description" id="fireplace-description">Keep the room warm</span>
+                        </span>
+                        <input class="toggle" id="fireplace" type="checkbox" role="switch" aria-describedby="fireplace-description" checked>
+                    </div>
+                </div>
+
+                <div class="toggle-column right">
+                    <div class="toggle-field toggle-field-described">
+                        <span class="toggle-text">
+                            <label class="toggle-title text-subtitle" for="night-lights">Night lights</label>
+                            <span class="toggle-description" id="night-lights-description">Make it dim and spooky</span>
+                        </span>
+                        <input class="toggle" id="night-lights" type="checkbox" role="switch" aria-describedby="night-lights-description">
+                    </div>
+                </div>
+
+                <!-- slider + checkbox -->
+                <div class="controls">
+                    <div class="field">
+                        <span class="field-label">Music</span>
+                        <div class="slider-header">
+                            <label class="field-label" for="slider-default">Volume</label>
+                            <span class="slider-value" aria-hidden="true">80%</span>
+                        </div>
+                        <input class="slider" id="slider-default" type="range" min="0" max="100" value="80" aria-valuetext="80%" style="--value: 80">
+                    </div>
+                    <label class="checkbox-field">
+                        <input class="checkbox" type="checkbox" checked>
+                        Add rain sounds
+                    </label>
+                </div>
+
+                <!-- 2 + 1 button -->
+                <div class="settings-column left">
+                    <button type="button" class="button button-primary">Save changes</button>
+                    <button type="button" class="button button-secondary">Cancel</button>
+                </div>
+                <div class="settings-column right">
+                    <button type="button" class="button button-ghost">Reset all settings</button>
+                </div>
+            </div>
+
+            <!-- account and display stay empty, tabs.js shows and hides the panels -->
+            <div role="tabpanel" id="panel-account" aria-labelledby="tab-account" hidden></div>
+            <div role="tabpanel" id="panel-display" aria-labelledby="tab-display" hidden></div>
+        </main>
+    </body>
+</html>
